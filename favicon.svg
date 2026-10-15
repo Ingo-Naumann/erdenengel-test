@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="50" fill="#f7f3ec"/>
+  <g fill="#8b713f">
+    <!-- linker Fluegel -->
+    <path d="M 44.5 46 C 37 33 30.5 26.5 24.5 24 C 20.5 30 18.5 35 16.5 40 C 19 47 23.5 54 29 60 C 35 61.5 40 60.5 44.5 58 Z"/>
+    <!-- rechter Fluegel (gespiegelt) -->
+    <path d="M 55.5 46 C 63 33 69.5 26.5 75.5 24 C 79.5 30 81.5 35 83.5 40 C 81 47 76.5 54 71 60 C 65 61.5 60 60.5 55.5 58 Z"/>
+    <!-- Gewand -->
+    <path d="M 44.5 44 L 55.5 44 L 63 80 L 37 80 Z"/>
+    <ellipse cx="50" cy="79" rx="13" ry="4"/>
+    <!-- Kopf -->
+    <circle cx="50" cy="33.5" r="7.5"/>
+  </g>
+</svg>

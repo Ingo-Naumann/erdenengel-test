@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Anmeldung zum Admin-Bereich.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Erdenengel – Praxis für Energiearbeit und Klangtherapie">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="Login – Erdenengel">
+<meta property="og:description" content="Anmeldung zum Admin-Bereich.">
+<meta property="og:url" content="https://erdenengel-kathleen.de/login.html">
+<meta property="og:image" content="https://erdenengel-kathleen.de/images/header-og_web.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<title>Login – Erdenengel</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<style>
+  @font-face {
+    font-family: 'font3';
+    src: url('fonts/cormorant-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'font3';
+    src: url('fonts/cormorant-medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'font3';
+    src: url('fonts/cormorant-semibold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'font3';
+    src: url('fonts/cormorant-italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'font3';
+    src: url('fonts/cormorant-light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'font3';
+    src: url('fonts/cormorant-light-italic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'font3';
+    src: url('fonts/cormorant-medium-italic.woff2') format('woff2');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'font3';
+    src: url('fonts/cormorant-semibold-italic.woff2') format('woff2');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'font3';
+    src: url('fonts/cormorant-bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'font3';
+    src: url('fonts/cormorant-bold-italic.woff2') format('woff2');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+  }
+
+    @font-face {
+    font-family: 'font2';
+    src: url('fonts/great-vibes.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'font1';
+    src: url('fonts/mea-culpa.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  :root {
+    --cream: #f7f3ec;
+    --cream-dark: #efe9df;
+    --text: #796b58;
+    --text-dark: #6f6557;
+    --accent: #8b713f;
+    --white: #ffffff;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'font3', serif;
+    background: var(--white);
+    color: var(--text-dark);
+    line-height: 1.4;
+  }
+
+  /* Logo / Titelbereich */
+  .brand {
+    text-align: center;
+    padding: 40px 20px 40px;
+    background: var(--white);
+  }
+
+  .initial {
+    font-family: 'font1', 'font2', cursive;
+    font-weight: bold;
+  }
+
+  .brand .script {
+    font-family: 'font2', cursive;
+    font-size: clamp(2.4rem, 5.5vw, 4rem);
+    color: var(--accent);
+    line-height: 1;
+  }
+
+  .brand .subtitle {
+    margin-top: 14px;
+    font-size: clamp(1rem, 1.8vw, 1.3rem);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--text);
+    font-weight: 400;
+    padding-right: 0.25em;
+    margin-right: -0.25em;
+  }
+
+  /* Navigation */
+  nav.main-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: var(--cream);
+    border-top: 1px solid #e8e1d3;
+    border-bottom: 1px solid #e8e1d3;
+    position: relative;
+    z-index: 10;
+  }
+
+  nav.main-nav .nav-item {
+    position: relative;
+  }
+
+  nav.main-nav a {
+    display: block;
+    padding: 22px 26px;
+    text-decoration: none;
+    color: var(--text-dark);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    position: relative;
+  }
+
+  nav.main-nav a:hover {
+    color: var(--text-dark);
+  }
+
+  nav.main-nav .has-dropdown::after {
+    content: '▾';
+    font-size: 1.1rem;
+    margin-left: 2px;
+    vertical-align: middle;
+  }
+
+  /* Dropdown-Untermenü */
+  .submenu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 240px;
+    background: var(--white);
+    border: 1px solid #e8e1d3;
+    border-top: 2px solid var(--accent);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  }
+
+  .nav-item:hover .submenu,
+  .nav-item:focus-within .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  nav.main-nav .submenu a {
+    padding: 10px 24px;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+
+  nav.main-nav .submenu a:hover { color: var(--text-dark); }
+
+  /* Hamburger-Button: nur auf Mobilgeraeten sichtbar */
+  .nav-toggle {
+    display: none;
+    width: 100%;
+    padding: 16px 20px;
+    background: var(--cream);
+    border: none;
+    border-bottom: 1px solid #e8e1d3;
+    font-family: 'font3', serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-dark);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav-toggle .bars {
+    display: inline-block;
+    width: 20px;
+    height: 14px;
+    position: relative;
+  }
+
+  .nav-toggle .bars span {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--text-dark);
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  .nav-toggle .bars span:nth-child(1) { top: 0; }
+  .nav-toggle .bars span:nth-child(2) { top: 6px; }
+  .nav-toggle .bars span:nth-child(3) { top: 12px; }
+
+  .nav-toggle[aria-expanded="true"] .bars span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+  .nav-toggle[aria-expanded="true"] .bars span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-toggle[aria-expanded="true"] .bars span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  /* Aufklapp-Schalter neben Menuepunkten mit Untermenue (nur mobil) */
+  .submenu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    padding: 0 22px;
+    color: var(--text-dark);
+    font-size: 1.3rem;
+    line-height: 1;
+    cursor: pointer;
+    align-items: center;
+    align-self: stretch;
+  }
+
+  .submenu-toggle span {
+    display: inline-block;
+    transition: transform 0.25s ease;
+  }
+
+  .submenu-toggle[aria-expanded="true"] span {
+    transform: rotate(180deg);
+  }
+
+  @media (max-width: 800px) {
+    .nav-toggle {
+      display: flex;
+    }
+
+    nav.main-nav {
+      flex-direction: column;
+      align-items: stretch;
+      max-height: 0;
+      overflow: hidden;
+      border-top: none;
+      border-bottom: none;
+      transition: max-height 0.3s ease;
+    }
+
+    nav.main-nav.open {
+      max-height: 1800px;
+      border-bottom: 1px solid #e8e1d3;
+    }
+
+    nav.main-nav > a,
+    nav.main-nav .nav-item > a {
+      text-align: left;
+      padding: 14px 22px;
+      border-bottom: 1px solid #ece5d8;
+    }
+
+    nav.main-nav .nav-item {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      border-bottom: 1px solid #ece5d8;
+    }
+
+    nav.main-nav .nav-item > a {
+      flex: 1;
+      border-bottom: none;
+    }
+
+    /* Pfeil des Desktop-Menues mobil ausblenden, Schalter zeigen */
+    nav.main-nav .has-dropdown::after {
+      content: none;
+    }
+
+    .submenu-toggle {
+      display: flex;
+    }
+
+    .submenu {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      box-shadow: none;
+      border: none;
+      display: none;
+      width: 100%;
+      background: #fbf8f2;
+    }
+
+    /* Hover-Oeffnen mobil deaktivieren - nur der Schalter oeffnet */
+    .nav-item:hover .submenu,
+    .nav-item:focus-within .submenu {
+      display: none;
+    }
+
+    .submenu.open {
+      display: block;
+    }
+
+    nav.main-nav .submenu a {
+      padding: 12px 34px;
+      white-space: normal;
+    }
+  }
+
+  /* Login-Bereich */
+  .login-wrap {
+    max-width: 400px;
+    margin: 70px auto 100px;
+    padding: 0 30px;
+  }
+
+  .login-card {
+    background: var(--cream);
+    padding: 40px 36px;
+  }
+
+  .login-card h1 {
+    font-family: 'font3', serif;
+    font-weight: 500;
+    font-size: 1.7rem;
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .login-card .subline {
+    text-align: center;
+    color: var(--text);
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+  }
+
+  .login-field {
+    margin-bottom: 20px;
+  }
+
+  .login-field label {
+    display: block;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+  }
+
+  .login-field input {
+    width: 100%;
+    padding: 12px 14px;
+    font-family: 'font3', serif;
+    font-size: 1.05rem;
+    color: var(--text-dark);
+    background: var(--white);
+    border: 1px solid #e0d6c4;
+    border-radius: 3px;
+  }
+
+  .login-field input:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+
+  .login-submit {
+    width: 100%;
+    padding: 13px;
+    margin-top: 8px;
+    font-family: 'font3', serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--text-dark);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  .login-submit:hover {
+    background: #756a5a;
+  }
+
+  footer {
+    background: var(--cream-dark);
+    padding: 30px;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .legal-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .legal-nav a {
+    color: var(--text-dark);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    font-size: 0.85rem;
+  }
+
+  .legal-nav a:hover {
+    color: var(--text-dark);
+    text-decoration: underline;
+  }
+
+  .legal-nav .divider {
+    color: var(--text);
+    opacity: 0.5;
+  }
+</style>
+</head>
+<body>
+
+  <div class="brand">
+    <div class="script"><span class="initial">E</span>rdenengel</div>
+    <div class="subtitle">Praxis für Energiearbeit und Klangtherapie</div>
+  </div>
+
+  <button class="nav-toggle" aria-expanded="false" aria-controls="hauptmenue" aria-label="Menü öffnen und schließen">
+    <span class="bars"><span></span><span></span><span></span></span>Menü
+  </button>
+
+  <nav class="main-nav" id="hauptmenue">
+    <a href="index.html">Startseite</a>
+    <a href="ueber-mich.html">Über mich</a>
+    <a href="die-praxis.html">Meine Praxis</a>
+    <div class="nav-item">
+      <a href="behandlungen.html" class="has-dropdown">Behandlungen</a>
+      <button class="submenu-toggle" aria-expanded="false" aria-label="Behandlungen Untermenü aufklappen"><span>▾</span></button>
+      <ul class="submenu">
+        <li><a href="behandlungen-klangschalentherapie.html">Klangschalentherapie</a></li>
+        <li><a href="behandlungen-reiki-energie.html">Reiki / Energie-Behandlung</a></li>
+        <li><a href="behandlungen-aura-healing.html">Aura-Healing</a></li>
+        <li><a href="behandlungen-rueckfuehrungstherapie.html">Rückführungstherapie</a></li>
+        <li><a href="behandlungen-wirbelsaeulenaufrichtung.html">Geistige Wirbelsäulenaufrichtung</a></li>
+        <li><a href="behandlungen-ahnenheilung.html">Ahnenheilung</a></li>
+        <li><a href="behandlungen-energetische-hausreinigung.html">Energetische Hausreinigung</a></li>
+        <li><a href="behandlungen-energetic-detox.html">Energetic Detox</a></li>
+        <li><a href="behandlungen-bemer-microzirkulation.html">Bemer Micro Zirkulation</a></li>
+        <li><a href="behandlungen-lebensberatung.html">Lebensberatung</a></li>
+        <li><a href="behandlungen-gutscheine.html">Gutscheine</a></li>
+      </ul>
+    </div>
+    <div class="nav-item">
+      <a href="einweihungen.html" class="has-dropdown">Einweihungen</a>
+      <button class="submenu-toggle" aria-expanded="false" aria-label="Einweihungen Untermenü aufklappen"><span>▾</span></button>
+      <ul class="submenu">
+        <li><a href="einweihungen-usui-reiki.html">Usui Reiki</a></li>
+        <li><a href="einweihungen-kundalini-reiki.html">Kundalini Reiki</a></li>
+        <li><a href="einweihungen-maria-magdalenas-licht.html">Maria-Magdalenas Licht</a></li>
+        <li><a href="einweihungen-full-spectrum-healing.html"><span lang="en">Full Spectrum Healing</span></a></li>
+        <li><a href="einweihungen-full-spectrum-light.html"><span lang="en">Full Spectrum Light</span></a></li>
+      </ul>
+    </div>
+    <a href="kurse.html">Kurse</a>
+    <a href="terminanfrage.html">Terminanfrage</a>
+  </nav>
+
+  <div class="login-wrap">
+    <div class="login-card">
+      <h1>Login</h1>
+      <p class="subline">Anmeldung für den Admin-Bereich</p>
+
+      <form action="admin/login.php" method="post">
+        <div class="login-field">
+          <label for="username">Benutzername</label>
+          <input type="text" id="username" name="username" autocomplete="username" required>
+        </div>
+        <div class="login-field">
+          <label for="password">Passwort</label>
+          <input type="password" id="password" name="password" autocomplete="current-password" required>
+        </div>
+        <button type="submit" class="login-submit">Anmelden</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <span>&copy; <span id="jahr"></span> Erdenengel – Praxis für Energiearbeit und Klangtherapie</span>
+    <span class="divider">|</span>
+    <nav class="legal-nav">
+      <a href="impressum.html">Impressum</a>
+      <span class="divider">|</span>
+      <a href="datenschutz.html">Datenschutzerklärung</a>
+      <span class="divider">|</span>
+      <a href="barrierefreiheit.html">Barrierefreiheit</a>
+      <span class="divider">|</span>
+      <a href="kontakt.html">Kontakt</a>
+      <span class="divider">|</span>
+      <a href="login.html">Login</a>
+    </nav>
+  </footer>
+
+  <script>
+    document.getElementById('jahr').textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    (function () {
+      var navToggle = document.querySelector('.nav-toggle');
+      var mainNav = document.querySelector('nav.main-nav');
+
+      if (navToggle && mainNav) {
+        navToggle.addEventListener('click', function () {
+          var open = mainNav.classList.toggle('open');
+          navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      }
+
+      document.querySelectorAll('.submenu-toggle').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var submenu = btn.parentElement.querySelector('.submenu');
+          if (!submenu) return;
+          var open = submenu.classList.toggle('open');
+          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /login.html
+Disallow: /admin/
+
+Sitemap: https://erdenengel-kathleen.de/sitemap.xml
