@@ -607,6 +607,17 @@
     color: var(--text);
     opacity: 0.5;
   }
+
+  /* Menüpunkt Kontakt: nur im Smartphone-Menü sichtbar */
+  nav.main-nav a.nav-mobile-only { display: none; }
+
+  /* Smartphone: Seitenleiste (Kontakt, Termin Vorschau) ausblenden */
+  @media (max-width: 800px) {
+    .sidebar { display: none; }
+    nav.main-nav a.nav-mobile-only { display: block; }
+    .legal-nav .legal-kontakt { display: none; }
+    .page-content { min-width: 0; overflow-wrap: break-word; }
+  }
 </style>
 </head>
 <body>
@@ -654,6 +665,7 @@
     </div>
     <a href="kurse.html">Kurse</a>
     <a href="terminanfrage.html">Terminanfrage</a>
+    <a href="kontakt.html" class="nav-mobile-only">Kontakt</a>
   </nav>
 
   <main>
@@ -726,8 +738,8 @@
       <span class="divider">|</span>
       <a href="barrierefreiheit.html">Barrierefreiheit</a>
       <span class="divider">|</span>
-      <a href="kontakt.html">Kontakt</a>
-      <span class="divider">|</span>
+      <a href="kontakt.html" class="legal-kontakt">Kontakt</a>
+      <span class="divider legal-kontakt">|</span>
       <a href="login.html">Login</a>
     </nav>
   </footer>
