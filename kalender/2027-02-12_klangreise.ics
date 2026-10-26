@@ -27,7 +27,7 @@ DTSTART;TZID=Europe/Berlin:20270212T180000
 DTEND;TZID=Europe/Berlin:20270212T190000
 SUMMARY:Erdenengel (Klangreise)
 LOCATION:Alfred-Nobel-Straße 1\, Haus 20\, 16225 Eberswalde
-DESCRIPTION:Klangreise in der Praxis Erdenengel\n\nTerminanfrage: https://erdenengel-kathleen.de/terminanfrage.html
+DESCRIPTION:Klangreise in der Praxis Erdenengel\n(bitte spätestens 10 Minuten vorher da sein, damit wir pünktlich beginnen können)\n\nTerminanfrage: https://erdenengel-kathleen.de/terminanfrage.html
 URL:https://erdenengel-kathleen.de/terminanfrage.html
 END:VEVENT
 END:VCALENDAR
