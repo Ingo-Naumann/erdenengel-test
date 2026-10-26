@@ -383,7 +383,7 @@
       display: none;
     }
 
-    .submenu.open {
+    nav.main-nav .submenu.open {
       display: block;
     }
 
@@ -629,6 +629,16 @@
     .legal-nav .legal-kontakt { display: none; }
     .page-content { min-width: 0; overflow-wrap: break-word; }
   }
+
+  /* Footer: Menü oben, Copyright darunter */
+  footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  footer > .legal-nav { order: 1; }
+  footer > span:first-child { order: 2; text-align: center; }
+  footer > .divider { display: none; }
 </style>
 </head>
 <body>
@@ -668,7 +678,6 @@
       <button class="submenu-toggle" aria-expanded="false" aria-label="Einweihungen Untermenü aufklappen"><span>▾</span></button>
       <ul class="submenu">
         <li><a href="einweihungen-usui-reiki.html">Usui Reiki</a></li>
-        <li><a href="einweihungen-kundalini-reiki.html">Kundalini Reiki</a></li>
         <li><a href="einweihungen-maria-magdalenas-licht.html">Maria-Magdalenas Licht</a></li>
         <li><a href="einweihungen-full-spectrum-healing.html"><span lang="en">Full Spectrum Healing</span></a></li>
         <li><a href="einweihungen-full-spectrum-light.html"><span lang="en">Full Spectrum Light</span></a></li>
@@ -697,6 +706,9 @@
 
       <h2>Bildrechte</h2>
       <p>Alle auf dieser Website verwendeten Bilder sind Eigentum von Kathleen Naumann. Eine Verwendung durch Dritte ist nur nach ausdrücklicher Genehmigung gestattet.</p>
+
+      <h2>Hinweis zu KI-Bildern</h2>
+      <p>Die meisten Bilder auf dieser Website wurden mit Hilfe von Programmen der künstlichen Intelligenz (KI) erstellt und anschließend von mir mit einem Grafikprogramm gestalterisch nachbearbeitet. Ausgenommen sind die Fotos auf den Seiten „Einweihungen“ und „Gutscheine“, diese Bilder sind nicht KI-generiert. Die KI-Bilder sind Symbolbilder und zeigen keine realen Personen, Orte oder Geräte. Das auf der Seite „Bemer Micro Zirkulation“ abgebildete Gerät entspricht nicht dem original BEMER-Gerät. Die Texte dieser Website sind nicht mit KI erstellt, ich erstelle und prüfe sie selbst.</p>
 
       <h2>Verbraucherstreitbeilegung/Universalschlichtungsstelle</h2>
       <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>

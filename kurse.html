@@ -391,7 +391,7 @@
       display: none;
     }
 
-    .submenu.open {
+    nav.main-nav .submenu.open {
       display: block;
     }
 
@@ -803,6 +803,16 @@
     .course-list .course-price { width: auto; flex: 0 0 auto; text-align: left; }
     .course-list .course-status { width: 100%; }
   }
+
+  /* Footer: Menü oben, Copyright darunter */
+  footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  footer > .legal-nav { order: 1; }
+  footer > span:first-child { order: 2; text-align: center; }
+  footer > .divider { display: none; }
 </style>
 </head>
 <body>
@@ -842,7 +852,6 @@
       <button class="submenu-toggle" aria-expanded="false" aria-label="Einweihungen Untermenü aufklappen"><span>▾</span></button>
       <ul class="submenu">
         <li><a href="einweihungen-usui-reiki.html">Usui Reiki</a></li>
-        <li><a href="einweihungen-kundalini-reiki.html">Kundalini Reiki</a></li>
         <li><a href="einweihungen-maria-magdalenas-licht.html">Maria-Magdalenas Licht</a></li>
         <li><a href="einweihungen-full-spectrum-healing.html"><span lang="en">Full Spectrum Healing</span></a></li>
         <li><a href="einweihungen-full-spectrum-light.html"><span lang="en">Full Spectrum Light</span></a></li>
@@ -877,7 +886,7 @@
 
       <ul class="course-list">
         <li data-cat="klangreise">
-          <span class="course-name">Klangreise</span>
+          <span class="course-name">Klangreise<span class="course-subline">(bitte spätestens 10 Minuten vorher da sein, damit wir pünktlich beginnen können)</span></span>
           <span class="course-datetime">
             <span class="course-date">Fr, 20. November 2026</span>
             <span class="course-time">18:00 – 19:00 Uhr</span>
@@ -898,7 +907,7 @@
           <span class="course-name"><span class="course-label">Kurse & Seminare</span>Rauhnächteseminar</span>
           <span class="course-datetime">
             <span class="course-date">Sa, 21. November 2026</span>
-            <span class="course-time">12:00 – 15:00 Uhr</span>
+            <span class="course-time">13:30 – 17:00 Uhr</span>
           </span>
           <span class="course-price">95 €</span>
           <span class="course-status"><a class="calendar-link" href="kalender/2026-11-21_rauhnaechteseminar.ics" download>Kalendereintrag herunterladen</a></span>
@@ -913,7 +922,7 @@
           <span class="course-status status-ausgebucht">Ausgebucht</span>
         </li>
         <li data-cat="klangreise">
-          <span class="course-name">Klangreise</span>
+          <span class="course-name">Klangreise<span class="course-subline">(bitte spätestens 10 Minuten vorher da sein, damit wir pünktlich beginnen können)</span></span>
           <span class="course-datetime">
             <span class="course-date">Fr, 18. Dezember 2026</span>
             <span class="course-time">18:00 – 19:00 Uhr</span>
@@ -936,7 +945,7 @@
 
       <ul class="course-list">
         <li data-cat="klangreise">
-          <span class="course-name">Klangreise</span>
+          <span class="course-name">Klangreise<span class="course-subline">(bitte spätestens 10 Minuten vorher da sein, damit wir pünktlich beginnen können)</span></span>
           <span class="course-datetime">
             <span class="course-date">Fr, 15. Januar 2027</span>
             <span class="course-time">18:00 – 19:00 Uhr</span>
@@ -954,7 +963,7 @@
           <span class="course-status"><a class="calendar-link" href="kalender/2027-01-15_frauenkreis.ics" download>Kalendereintrag herunterladen</a></span>
         </li>
         <li data-cat="klangreise">
-          <span class="course-name">Klangreise</span>
+          <span class="course-name">Klangreise<span class="course-subline">(bitte spätestens 10 Minuten vorher da sein, damit wir pünktlich beginnen können)</span></span>
           <span class="course-datetime">
             <span class="course-date">Fr, 12. Februar 2027</span>
             <span class="course-time">18:00 – 19:00 Uhr</span>
@@ -972,7 +981,7 @@
           <span class="course-status"><a class="calendar-link" href="kalender/2027-02-12_frauenkreis.ics" download>Kalendereintrag herunterladen</a></span>
         </li>
         <li data-cat="klangreise">
-          <span class="course-name">Klangreise</span>
+          <span class="course-name">Klangreise<span class="course-subline">(bitte spätestens 10 Minuten vorher da sein, damit wir pünktlich beginnen können)</span></span>
           <span class="course-datetime">
             <span class="course-date">Fr, 12. März 2027</span>
             <span class="course-time">18:00 – 19:00 Uhr</span>
@@ -1035,7 +1044,7 @@
           <span class="course-status"><a class="calendar-link" href="kalender/2027-06-05_usui-reiki-2-grad.ics" download>Kalendereintrag herunterladen</a></span>
         </li>
         <li data-cat="klangreise">
-          <span class="course-name">Klangreise</span>
+          <span class="course-name">Klangreise<span class="course-subline">(bitte spätestens 10 Minuten vorher da sein, damit wir pünktlich beginnen können)</span></span>
           <span class="course-datetime">
             <span class="course-date">Fr, 18. Juni 2027</span>
             <span class="course-time">18:00 – 19:00 Uhr</span>
@@ -1071,7 +1080,7 @@
           <span class="course-status"><a class="calendar-link" href="kalender/2027-08-27_frauenkreis.ics" download>Kalendereintrag herunterladen</a></span>
         </li>
         <li data-cat="klangreise">
-          <span class="course-name">Klangreise</span>
+          <span class="course-name">Klangreise<span class="course-subline">(bitte spätestens 10 Minuten vorher da sein, damit wir pünktlich beginnen können)</span></span>
           <span class="course-datetime">
             <span class="course-date">Fr, 24. September 2027</span>
             <span class="course-time">18:00 – 19:00 Uhr</span>
@@ -1116,7 +1125,7 @@
           <span class="course-status"><a class="calendar-link" href="kalender/2027-11-07_usui-reiki-1-grad.ics" download>Kalendereintrag herunterladen</a></span>
         </li>
         <li data-cat="klangreise">
-          <span class="course-name">Klangreise</span>
+          <span class="course-name">Klangreise<span class="course-subline">(bitte spätestens 10 Minuten vorher da sein, damit wir pünktlich beginnen können)</span></span>
           <span class="course-datetime">
             <span class="course-date">Fr, 12. November 2027</span>
             <span class="course-time">18:00 – 19:00 Uhr</span>
@@ -1146,13 +1155,13 @@
           <span class="course-name"><span class="course-label">Kurse & Seminare</span>Rauhnächteseminar</span>
           <span class="course-datetime">
             <span class="course-date">Sa, 20. November 2027</span>
-            <span class="course-time">12:00 – 15:00 Uhr</span>
+            <span class="course-time">13:30 – 17:00 Uhr</span>
           </span>
           <span class="course-price">95 €</span>
           <span class="course-status"><a class="calendar-link" href="kalender/2027-11-20_rauhnaechteseminar.ics" download>Kalendereintrag herunterladen</a></span>
         </li>
         <li data-cat="klangreise">
-          <span class="course-name">Klangreise</span>
+          <span class="course-name">Klangreise<span class="course-subline">(bitte spätestens 10 Minuten vorher da sein, damit wir pünktlich beginnen können)</span></span>
           <span class="course-datetime">
             <span class="course-date">Fr, 17. Dezember 2027</span>
             <span class="course-time">18:00 – 19:00 Uhr</span>

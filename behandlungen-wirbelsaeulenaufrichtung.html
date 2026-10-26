@@ -391,7 +391,7 @@
       display: none;
     }
 
-    .submenu.open {
+    nav.main-nav .submenu.open {
       display: block;
     }
 
@@ -702,6 +702,16 @@
     .legal-nav .legal-kontakt { display: none; }
     .page-content { min-width: 0; overflow-wrap: break-word; }
   }
+
+  /* Footer: Menü oben, Copyright darunter */
+  footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  footer > .legal-nav { order: 1; }
+  footer > span:first-child { order: 2; text-align: center; }
+  footer > .divider { display: none; }
 </style>
 </head>
 <body>
@@ -741,7 +751,6 @@
       <button class="submenu-toggle" aria-expanded="false" aria-label="Einweihungen Untermenü aufklappen"><span>▾</span></button>
       <ul class="submenu">
         <li><a href="einweihungen-usui-reiki.html">Usui Reiki</a></li>
-        <li><a href="einweihungen-kundalini-reiki.html">Kundalini Reiki</a></li>
         <li><a href="einweihungen-maria-magdalenas-licht.html">Maria-Magdalenas Licht</a></li>
         <li><a href="einweihungen-full-spectrum-healing.html"><span lang="en">Full Spectrum Healing</span></a></li>
         <li><a href="einweihungen-full-spectrum-light.html"><span lang="en">Full Spectrum Light</span></a></li>
@@ -756,25 +765,13 @@
     <div class="page-content">
       <img class="page-image" width="640" height="640" loading="lazy" decoding="async" src="images/geistige-wirbelsaeulenaufrichtung_web.jpg" alt="Energetische Wirbelsäulenaufrichtung: Rückenansicht einer meditierenden Person mit leuchtenden Chakren entlang der Wirbelsäule">
       <div class="breadcrumb"><a href="behandlungen.html">Behandlungen</a> / Geistige Wirbelsäulenaufrichtung</div>
-      <h1>Geistige Wirbelsäulenaufrichtung</h1>
+      <h1>Geistige Wirbelsäulen&shy;aufrichtung</h1>
       <p class="intro-line">… deine Wirbel-<span class="script-word"><span class="initial">S</span>äule</span> ist dein Lot</p>
       <p>Stehst du mit beiden Beinen fest im Leben oder verbiegst du dich für dein Umfeld? – deine Wirbelsäule zeigt es dir!</p>
       <p>Viele Menschen stehen in irgendeiner Weise schief, ob es sich um einen Beckenschiefstand, eine Skoliose oder etwas anderes handelt. Oft kann diese ‚Schieflage‘ zu Schmerzen führen, weil der Körper sie auszugleichen versucht. Grund dafür sind die sogenannten ‚Päckchen des Lebens‘ die jeder Mensch mit sich herumträgt. Sie hängen wie Gewichte am Körper und können ihn an verschiedenen Stellen herunterziehen.</p>
       <p>Bei der geistigen Wirbelsäulenaufrichtung wird auf energetischer Ebene an der Aufrichtung des Körpers gearbeitet. Diese Methode setzt auf sanfte, nicht-manipulative Weise an, also ganz ohne körperliche Eingriffe.</p>
       <p>Ziel ist es, die energetischen Blockaden (‚Päckchen‘) entlang der Wirbelsäule, die sich auf deine Haltung, Beweglichkeit und dein inneres Gleichgewicht auswirken können zu lösen, damit du dich wieder zu deiner vollen Größe aufrichten kannst.</p>
       <p>Die Aufrichtung wirkt nicht nur unmittelbar während der Sitzung, sondern auch in den Tagen danach, während sich der Körper dem Energiefeld anpasst und sich nach und nach neu ausrichtet. Die Wirkung ist von Mensch zu Mensch sehr unterschiedlich, es kann deshalb sein, dass du dich nach der Behandlung erst einmal ‚schief‘ fühlst und an deine neue Haltung gewöhnen musst.</p>
-      <p>Eine Geistige Wirbelsäulenaufrichtung kann bei folgenden Themen hilfreich sein:</p>
-      <ul class="symptom-list">
-        <li>Verspannungen im Schulter- und Nackenbereich</li>
-        <li>Rückenschmerzen allgemein</li>
-        <li>Bandscheibenvorfall</li>
-        <li>Gelenkschmerzen</li>
-        <li>Beckenschiefstand</li>
-        <li>Beinlängendifferenz</li>
-        <li>Wirbelsäulenkrümmung (Scoliose)</li>
-        <li>usw.</li>
-      </ul>
-      
     </div>
 
     <aside class="sidebar">

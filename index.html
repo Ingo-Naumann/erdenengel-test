@@ -393,7 +393,7 @@
       display: none;
     }
 
-    .submenu.open {
+    nav.main-nav .submenu.open {
       display: block;
     }
 
@@ -638,6 +638,16 @@
     .legal-nav .legal-kontakt { display: none; }
     .page-content { min-width: 0; overflow-wrap: break-word; }
   }
+
+  /* Footer: Menü oben, Copyright darunter */
+  footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  footer > .legal-nav { order: 1; }
+  footer > span:first-child { order: 2; text-align: center; }
+  footer > .divider { display: none; }
 </style>
 </head>
 <body>
@@ -679,7 +689,6 @@
       <button class="submenu-toggle" aria-expanded="false" aria-label="Einweihungen Untermenü aufklappen"><span>▾</span></button>
       <ul class="submenu">
         <li><a href="einweihungen-usui-reiki.html">Usui Reiki</a></li>
-        <li><a href="einweihungen-kundalini-reiki.html">Kundalini Reiki</a></li>
         <li><a href="einweihungen-maria-magdalenas-licht.html">Maria-Magdalenas Licht</a></li>
         <li><a href="einweihungen-full-spectrum-healing.html"><span lang="en">Full Spectrum Healing</span></a></li>
         <li><a href="einweihungen-full-spectrum-light.html"><span lang="en">Full Spectrum Light</span></a></li>

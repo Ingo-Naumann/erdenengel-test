@@ -383,7 +383,7 @@
       display: none;
     }
 
-    .submenu.open {
+    nav.main-nav .submenu.open {
       display: block;
     }
 
@@ -595,6 +595,69 @@
     line-height: 1.15;
   }
 
+  .map-embed {
+    margin-top: 34px;
+    max-width: 640px;
+  }
+
+  .map-embed iframe {
+    display: block;
+    width: 100%;
+    height: 340px;
+    border: 0;
+    border-radius: 4px;
+  }
+
+  .map-consent {
+    background: var(--cream-dark);
+    border: 1px solid #e8e1d3;
+    border-radius: 4px;
+    padding: 26px 24px;
+    text-align: center;
+  }
+
+  .map-consent p {
+    font-size: 1rem;
+    margin-bottom: 14px;
+  }
+
+  .map-consent .map-consent-title {
+    color: var(--text-dark);
+    font-size: 1.15rem;
+    font-weight: 600;
+  }
+
+  .map-consent a {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+
+  .map-button {
+    font-family: inherit;
+    font-size: 1rem;
+    letter-spacing: 0.06em;
+    color: #fff;
+    background: var(--text-dark);
+    border: 0;
+    border-radius: 3px;
+    padding: 11px 26px;
+    cursor: pointer;
+  }
+
+  .map-button:hover,
+  .map-button:focus-visible {
+    background: var(--accent);
+  }
+
+  .map-embed .map-note {
+    font-size: 0.85rem;
+    margin-top: 6px;
+  }
+
+  .map-embed .map-note a {
+    color: var(--accent);
+  }
+
   .maps-link {
     display: inline-block;
     margin-top: 6px;
@@ -656,6 +719,16 @@
     .legal-nav .legal-kontakt { display: none; }
     .page-content { min-width: 0; overflow-wrap: break-word; }
   }
+
+  /* Footer: Menü oben, Copyright darunter */
+  footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  footer > .legal-nav { order: 1; }
+  footer > span:first-child { order: 2; text-align: center; }
+  footer > .divider { display: none; }
 </style>
 </head>
 <body>
@@ -695,7 +768,6 @@
       <button class="submenu-toggle" aria-expanded="false" aria-label="Einweihungen Untermenü aufklappen"><span>▾</span></button>
       <ul class="submenu">
         <li><a href="einweihungen-usui-reiki.html">Usui Reiki</a></li>
-        <li><a href="einweihungen-kundalini-reiki.html">Kundalini Reiki</a></li>
         <li><a href="einweihungen-maria-magdalenas-licht.html">Maria-Magdalenas Licht</a></li>
         <li><a href="einweihungen-full-spectrum-healing.html"><span lang="en">Full Spectrum Healing</span></a></li>
         <li><a href="einweihungen-full-spectrum-light.html"><span lang="en">Full Spectrum Light</span></a></li>
@@ -741,6 +813,16 @@
         <span class="lines compact">Nach Vereinbarung</span>
       </div>
       </div>
+
+      <div class="map-embed" id="karte">
+        <div class="map-consent" id="karte-platzhalter">
+          <p class="map-consent-title">Karte der Praxis</p>
+          <p>Zum Anzeigen der Karte wird eine Verbindung zu OpenStreetMap (OpenStreetMap Foundation, Vereinigtes Königreich) hergestellt. Dabei wird deine IP-Adresse an OpenStreetMap übermittelt. Mehr dazu in der <a href="datenschutz.html#openstreetmap">Datenschutzerklärung</a>.</p>
+          <button type="button" class="map-button" id="karte-laden" aria-controls="karte">Karte laden</button>
+          <noscript><p><a href="https://www.openstreetmap.org/?mlat=52.855498&amp;mlon=13.774613#map=18/52.855498/13.774613" target="_blank" rel="noopener">Karte auf openstreetmap.org öffnen</a></p></noscript>
+        </div>
+        <p class="map-note"><a href="https://www.openstreetmap.org/?mlat=52.855498&amp;mlon=13.774613#map=18/52.855498/13.774613" target="_blank" rel="noopener">Größere Karte auf openstreetmap.org öffnen</a> · Karte: © OpenStreetMap-Mitwirkende</p>
+      </div>
     </div>
 
     <aside class="sidebar">
@@ -781,6 +863,22 @@
       <a href="login.html">Login</a>
     </nav>
   </footer>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('karte-laden');
+      var box = document.getElementById('karte-platzhalter');
+      if (!btn || !box) return;
+      btn.addEventListener('click', function () {
+        var f = document.createElement('iframe');
+        f.title = 'Karte: Lage der Praxis Erdenengel, Alfred-Nobel-Straße 1, Haus 20, 16225 Eberswalde (OpenStreetMap)';
+        f.src = 'https://www.openstreetmap.org/export/embed.html?bbox=13.771613,52.853498,13.777613,52.857498&layer=mapnik&marker=52.855498,13.774613';
+        f.referrerPolicy = 'no-referrer-when-downgrade';
+        box.parentNode.replaceChild(f, box);
+        f.focus();
+      });
+    })();
+  </script>
 
   <script>
     document.getElementById('jahr').textContent = new Date().getFullYear();

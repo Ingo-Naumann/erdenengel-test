@@ -391,7 +391,7 @@
       display: none;
     }
 
-    .submenu.open {
+    nav.main-nav .submenu.open {
       display: block;
     }
 
@@ -462,14 +462,16 @@
   .symptom-list li {
     color: var(--text);
     font-size: 1.15rem;
-    padding: 3px 0;
+    padding: 3px 0 3px 20px;
+    position: relative;
     break-inside: avoid;
   }
 
   .symptom-list li::before {
     content: '•';
     color: var(--accent);
-    margin-right: 10px;
+    position: absolute;
+    left: 0;
   }
 
   .page-content .intro-line {
@@ -719,6 +721,16 @@
     .legal-nav .legal-kontakt { display: none; }
     .page-content { min-width: 0; overflow-wrap: break-word; }
   }
+
+  /* Footer: Menü oben, Copyright darunter */
+  footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  footer > .legal-nav { order: 1; }
+  footer > span:first-child { order: 2; text-align: center; }
+  footer > .divider { display: none; }
 </style>
 </head>
 <body>
@@ -758,7 +770,6 @@
       <button class="submenu-toggle" aria-expanded="false" aria-label="Einweihungen Untermenü aufklappen"><span>▾</span></button>
       <ul class="submenu">
         <li><a href="einweihungen-usui-reiki.html">Usui Reiki</a></li>
-        <li><a href="einweihungen-kundalini-reiki.html">Kundalini Reiki</a></li>
         <li><a href="einweihungen-maria-magdalenas-licht.html">Maria-Magdalenas Licht</a></li>
         <li><a href="einweihungen-full-spectrum-healing.html"><span lang="en">Full Spectrum Healing</span></a></li>
         <li><a href="einweihungen-full-spectrum-light.html"><span lang="en">Full Spectrum Light</span></a></li>
@@ -775,8 +786,8 @@
       <div class="breadcrumb"><a href="behandlungen.html">Behandlungen</a> / Bemer Micro Zirkulation</div>
       <h1>Bemer Micro Zirkulation</h1>
       <p class="intro-line">… gib dich dem Fluss des <span class="script-word"><span class="initial">L</span>ebens</span> hin</p>
-      <p>Das Blut in unserem Körper ist wie ein Fluss, der alle Ufer an denen er vorbeikommt mit Nährstoffen versorgt und zum Erblühen bringt. Trocknet ein Flussarm aus, so vertrocknet auch die Umgebung. Hier setzt die BEMER Therapie an. In unserem Körper gibt es nicht nur große Venen und Arterien in denen unser Blut pulsiert, es gibt auch ein ganzes Netzwerk kleinster Blutgefäße, die sich wie unsere Nervenbahnen durch den ganzen Körper ziehen. Wenn diese kleinsten Blutgefäße verstopfen, werden bestimmte Bereiche mit Nährstoffen unterversorgt und Krankheiten können daraus entstehen.</p>
-      <p>Die BEMER Therapie ist eine sanfte Methode zur Anregung der Durchblutung auf kleinster Ebene (Mikrozirkulation). Durch spezielle, sanfte Signale wird die Mikrozirkulation im gesamten Körper unterstützt. Eine gut funktionierende Mikrozirkulation gilt als wichtige Grundlage für die Versorgung des Körpers mit Nährstoffen und Sauerstoff bis in die kleinsten Gefäße. Diese sanfte Signaltechnologie unterstützt diesen natürlichen Prozess, was sich positiv auf Energie, Regeneration und allgemeines Wohlbefinden auswirken kann.</p>
+      <p>Das Blut in unserem Körper ist wie ein Fluss, der alle Ufer an denen er vorbeikommt mit Nährstoffen versorgt und zum Erblühen bringt. Trocknet ein Flussarm aus, so vertrocknet auch die Umgebung. Hier setzt die BEMER-Anwendung an. In unserem Körper gibt es nicht nur große Venen und Arterien in denen unser Blut pulsiert, es gibt auch ein ganzes Netzwerk kleinster Blutgefäße, die sich wie unsere Nervenbahnen durch den ganzen Körper ziehen. Wenn diese kleinsten Blutgefäße verstopfen, werden bestimmte Bereiche mit Nährstoffen unterversorgt und Krankheiten können daraus entstehen.</p>
+      <p>Die BEMER-Magnetfeldtherapie ist eine sanfte Methode zur Anregung der Durchblutung auf kleinster Ebene (Mikrozirkulation). Durch spezielle, sanfte Signale wird die Mikrozirkulation im gesamten Körper unterstützt. Eine gut funktionierende Mikrozirkulation gilt als wichtige Grundlage für die Versorgung des Körpers mit Nährstoffen und Sauerstoff bis in die kleinsten Gefäße. Diese sanfte Signaltechnologie unterstützt diesen natürlichen Prozess, was sich positiv auf Energie, Regeneration und allgemeines Wohlbefinden auswirken kann.</p>
       <p>Die Anwendung kann entspannt im Liegen auf einer speziell entwickelten Ganzkörper-Matte oder auch im Sitzen zur punktuellen Behandlung stattfinden. Die Anwendungsdauer und Intensität werden individuell auf dich abgestimmt. Die regelmäßige Anwendung ist eine gute Präventivmaßnahme zur Gesunderhaltung des Körpers da sie die Mikrozirkulation langfristig unterstützt.</p>
       <p>Die BEMER Micro Zirkulation ersetzt keine medizinisch verordnete Therapie. Sie dient zur Stimulation der Durchblutung kleinerer und sehr kleiner Blutgefäße, sowie der Verbesserung bestimmter Krankheitsbilder (Angaben laut Hersteller) wie zum Beispiel:</p>
       <ul class="symptom-list">

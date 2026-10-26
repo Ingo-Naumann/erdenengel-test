@@ -391,7 +391,7 @@
       display: none;
     }
 
-    .submenu.open {
+    nav.main-nav .submenu.open {
       display: block;
     }
 
@@ -678,6 +678,16 @@
     .legal-nav .legal-kontakt { display: none; }
     .page-content { min-width: 0; overflow-wrap: break-word; }
   }
+
+  /* Footer: Menü oben, Copyright darunter */
+  footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  footer > .legal-nav { order: 1; }
+  footer > span:first-child { order: 2; text-align: center; }
+  footer > .divider { display: none; }
 </style>
 </head>
 <body>
@@ -717,7 +727,6 @@
       <button class="submenu-toggle" aria-expanded="false" aria-label="Einweihungen Untermenü aufklappen"><span>▾</span></button>
       <ul class="submenu">
         <li><a href="einweihungen-usui-reiki.html">Usui Reiki</a></li>
-        <li><a href="einweihungen-kundalini-reiki.html">Kundalini Reiki</a></li>
         <li><a href="einweihungen-maria-magdalenas-licht.html">Maria-Magdalenas Licht</a></li>
         <li><a href="einweihungen-full-spectrum-healing.html"><span lang="en">Full Spectrum Healing</span></a></li>
         <li><a href="einweihungen-full-spectrum-light.html"><span lang="en">Full Spectrum Light</span></a></li>
@@ -736,7 +745,7 @@
       <p class="intro-line">… was dir auf der <span class="script-word"><span class="initial">S</span>eele</span> brennt</p>
       <p>In der Lebensberatung nehme ich mir Zeit für die Fragen und Themen, die dich gerade beschäftigen. Ob berufliche Entscheidungen, Beziehungen oder persönliche Weiterentwicklung – in einem vertrauensvollen Gespräch schauen wir gemeinsam auf deine aktuelle Situation.</p>
       <p>Mein Ziel ist es, dir neue Perspektiven zu eröffnen und dir dabei zu helfen, deinen eigenen Weg mit mehr Klarheit und Zuversicht zu gehen. Gemeinsam erarbeiten wir Lösungsansätze, die wirklich zu dir und deiner Lebenssituation passen. Du bestimmst dabei stets selbst, welche Themen du in welcher Tiefe ansprechen möchtest.</p>
-      <p>Es liegt mir am Herzen, dass du dich bei mir sicher und geborgen fühlst. Deshalb behandle ich alles, was in unseren Sitzungen zur Sprache kommt mit höchst vertraulich. So entsteht ein geschützter Rahmen, in dem du auch schwierige oder sehr persönliche Themen offen ansprechen kannst, ohne dir Sorgen machen zu müssen.</p>
+      <p>Es liegt mir am Herzen, dass du dich bei mir sicher und geborgen fühlst. Deshalb behandle ich alles, was in unseren Sitzungen zur Sprache kommt höchst vertraulich. So entsteht ein geschützter Rahmen, in dem du auch schwierige oder sehr persönliche Themen offen ansprechen kannst, ohne dir Sorgen machen zu müssen.</p>
       <p>Je nach deinem Anliegen kann bereits ein einzelnes Gespräch ausreichen um dir genügend neue Impulse zu geben, während andere Themen eine kontinuierliche Begleitung über mehrere Sitzungen hinweg sinnvoller machen. Gemeinsam finden wir heraus, welcher Rhythmus für dich und deine aktuelle Lebenssituation am besten passt.</p>
       
     </div>

@@ -391,7 +391,7 @@
       display: none;
     }
 
-    .submenu.open {
+    nav.main-nav .submenu.open {
       display: block;
     }
 
@@ -670,9 +670,8 @@
 
   /* Kundenstimmen */
   .testimonials {
-    max-width: 900px;
-    margin: 0 auto 90px;
-    padding: 0 30px;
+    margin: 50px 0 0;
+    padding: 0;
     text-align: center;
   }
 
@@ -687,7 +686,7 @@
   .testimonial {
     color: var(--text);
     font-size: 1.15rem;
-    margin-bottom: 45px;
+    margin-bottom: 0;
   }
 
   .testimonial .signature {
@@ -706,6 +705,16 @@
     .legal-nav .legal-kontakt { display: none; }
     .page-content { min-width: 0; overflow-wrap: break-word; }
   }
+
+  /* Footer: Menü oben, Copyright darunter */
+  footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  footer > .legal-nav { order: 1; }
+  footer > span:first-child { order: 2; text-align: center; }
+  footer > .divider { display: none; }
 </style>
 </head>
 <body>
@@ -745,7 +754,6 @@
       <button class="submenu-toggle" aria-expanded="false" aria-label="Einweihungen Untermenü aufklappen"><span>▾</span></button>
       <ul class="submenu">
         <li><a href="einweihungen-usui-reiki.html">Usui Reiki</a></li>
-        <li><a href="einweihungen-kundalini-reiki.html">Kundalini Reiki</a></li>
         <li><a href="einweihungen-maria-magdalenas-licht.html">Maria-Magdalenas Licht</a></li>
         <li><a href="einweihungen-full-spectrum-healing.html"><span lang="en">Full Spectrum Healing</span></a></li>
         <li><a href="einweihungen-full-spectrum-light.html"><span lang="en">Full Spectrum Light</span></a></li>
@@ -760,27 +768,19 @@
     <div class="page-content">
       <img class="page-image" width="640" height="640" loading="lazy" decoding="async" src="images/klangschalentherapie_web.jpg" alt="Tibetische Klangschale mit Schlägel auf einer Wasseroberfläche bei Sonnenuntergang, umgeben von sanften Wellenringen">
       <div class="breadcrumb"><a href="behandlungen.html">Behandlungen</a> / Klangschalentherapie</div>
-      <h1>Klangschalentherapie</h1>
+      <h1>Klangschalen&shy;therapie</h1>
       <p class="intro-line">…<span class="script-word"><span class="initial">K</span>länge</span> sind die Sprache der <span class="script-word"><span class="initial">S</span>eele</span></p>
       <p>Die Klangschalentherapie ist eine der ältesten bekannten Heilmethoden und eine sehr sanfte Form der Energiearbeit. Dabei werden ganz individuell auf dich abgestimmt unterschiedliche Klangschalen direkt auf und um deinen Körper herum aufgestellt und angespielt. Die sanften Schwingungen und Klänge wirken dabei nicht nur auf das Gehör, sondern werden auch als sanfte Vibration im ganzen Körper wahrgenommen und helfen dabei Verspannungen zu lösen, den Geist zur Ruhe kommen zu lassen und die eigene Körperwahrnehmung neu zu entdecken.</p>
       <p>Viele Menschen berichten nach einer Sitzung von einem Gefühl tiefer Entspannung, innerer Klarheit und neuer Energie. Die Behandlung eignet sich sowohl zur gezielten Unterstützung bei konkreten Beschwerden als auch einfach als wohltuende Auszeit vom Alltag. Viele Klientinnen und Klienten empfinden bereits nach der ersten Behandlung ein spürbar leichteres Körpergefühl. Regelmäßige Anwendungen können außerdem dabei helfen, langfristig zu mehr innerer Balance und einem entspannteren Umgang mit stressigen Situationen im Alltag zu finden.</p>
-      <p>Eine Klangschalentherapie kann unter anderem wohltuend wirken bei:</p>
-      <ul class="symptom-list">
-        <li>Stress</li>
-        <li>Burnout</li>
-        <li>Schlafstörungen</li>
-        <li>Innerer Zerrissenheit</li>
-        <li>Nervosität</li>
-        <li>Unkonzentriertheit</li>
-        <li>ADHS</li>
-        <li>Tinnitus</li>
-        <li>Kopfschmerzen &amp; Migräne</li>
-        <li>Schwachem Immunsystem</li>
-        <li>Allergien</li>
-        <li>Herz-Kreislaufbeschwerden</li>
-        <li>Hohem Blutdruck</li>
-        <li>Verdauungsbeschwerden</li>
-      </ul>
+
+    <section class="testimonials">
+      <h2>Erfahrungsberichte</h2>
+
+      <div class="testimonial">
+        <p>Für mich ist sie wirklich ein Engel. Ich würde immer wieder hingehen. Ich hatte Rauschen auf den Ohren und ein Feuerwerk in der Brust. Ich bekam eine Klangschalen-Therapie, es fühlte sich toll an. Mein Körper schaltete ab, was mir wirklich sehr schwer fällt. Aber ich bin tiefenentspannt nach Hause und bin jetzt zwei Tage später immernoch begeistert. Ich fühle mich klar und ruhiger im Inneren. Werde auf jeden Fall wieder hingehen. Einfach was für mich tun! Danke Danke liebe Kathleen.</p>
+        <p class="signature">Susi, März 2026</p>
+      </div>
+    </section>
     </div>
 
     <aside class="sidebar">
@@ -834,15 +834,6 @@
       </ul>
     </aside>
   </main>
-
-  <section class="testimonials">
-    <h2>Erfahrungsberichte</h2>
-
-    <div class="testimonial">
-      <p>Für mich ist sie wirklich ein Engel. Ich würde immer wieder hingehen. Ich hatte Rauschen auf den Ohren und ein Feuerwerk in der Brust. Ich bekam eine Klangschalen-Therapie, es fühlte sich toll an. Mein Körper schaltete ab, was mir wirklich sehr schwer fällt. Aber ich bin tiefenentspannt nach Hause und bin jetzt zwei Tage später immernoch begeistert. Ich fühle mich klar und ruhiger im Inneren. Werde auf jeden Fall wieder hingehen. Einfach was für mich tun! Danke Danke liebe Kathleen.</p>
-      <p class="signature">Susi, März 2026</p>
-    </div>
-  </section>
 
   <footer>
     <span>&copy; <span id="jahr"></span> Erdenengel – Praxis für Energiearbeit und Klangtherapie</span>

@@ -391,7 +391,7 @@
       display: none;
     }
 
-    .submenu.open {
+    nav.main-nav .submenu.open {
       display: block;
     }
 
@@ -689,6 +689,27 @@
   }
 
 
+  .page-content p a {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+
+  .page-content .step-facts {
+    list-style: none;
+    margin: 30px 0 30px;
+  }
+
+  .page-content .step-facts li {
+    color: var(--text);
+    font-size: 1.15rem;
+    padding: 3px 0;
+  }
+
+  .page-content .step-facts strong {
+    color: var(--text-dark);
+    font-weight: 600;
+  }
+
   /* Menüpunkt Kontakt: nur im Smartphone-Menü sichtbar */
   nav.main-nav a.nav-mobile-only { display: none; }
 
@@ -699,6 +720,16 @@
     .legal-nav .legal-kontakt { display: none; }
     .page-content { min-width: 0; overflow-wrap: break-word; }
   }
+
+  /* Footer: Menü oben, Copyright darunter */
+  footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  footer > .legal-nav { order: 1; }
+  footer > span:first-child { order: 2; text-align: center; }
+  footer > .divider { display: none; }
 </style>
 </head>
 <body>
@@ -738,7 +769,6 @@
       <button class="submenu-toggle" aria-expanded="false" aria-label="Einweihungen Untermenü aufklappen"><span>▾</span></button>
       <ul class="submenu">
         <li><a href="einweihungen-usui-reiki.html">Usui Reiki</a></li>
-        <li><a href="einweihungen-kundalini-reiki.html">Kundalini Reiki</a></li>
         <li><a href="einweihungen-maria-magdalenas-licht.html">Maria-Magdalenas Licht</a></li>
         <li><a href="einweihungen-full-spectrum-healing.html"><span lang="en">Full Spectrum Healing</span></a></li>
         <li><a href="einweihungen-full-spectrum-light.html"><span lang="en">Full Spectrum Light</span></a></li>
@@ -753,12 +783,16 @@
     <div class="page-content">
       <div class="page-image-placeholder"><span>Bild folgt in Kürze</span></div>
       <div class="breadcrumb"><a href="behandlungen.html">Behandlungen</a> / Energetische Hausreinigung</div>
-      <h1>Energetische Hausreinigung</h1>
+      <h1>Energeti&shy;sche Hausreini&shy;gung</h1>
       <p class="intro-line">… zu Hause ist dort, wo sich das <span class="script-word"><span class="initial">H</span>erz</span> wohlfühlt</p>
       <p>So wie sich der Staub auf die Einrichtung legt, kann sich mit der Zeit auch unsichtbarer Schmutz in Räumen ansammeln und das Wohlgefühl darin beeinflussen. Doch seien wir mal ehrlich, wer denkt bei häufigen Krankheiten, Streitereien oder Erschöpfung an Energien die in den Wänden stecken? Hast du dich mal gefragt, was dein zu Hause schon alles erlebt hat? Wer hat vorher in dem Haus oder dem Raum gelebt? Ist dort jemand verstorben? Was war an dem Ort bevor dein Haus dort gebaut wurde, vielleicht ein Friedhof oder ein Kriegsschauplatz?</p>
       <p>Jeder Ort und jedes Haus hat seine eigene Geschichte zu erzählen, hat schöne und schlimme Dinge miterlebt und seine Narben zurückbehalten, die letztendlich den natürlichen Energiefluss blockieren. Bei einer energetischen Hausreinigung werden diese festsitzenden Energien in deinem Wohn- oder auch Arbeitsraum gelöst und losgelassen.</p>
       <p>Gerade nach belastenden Lebensereignissen, beim Einzug in ein neues Heim oder einfach als regelmäßige energetische Pflege kann eine solche Reinigung dabei helfen, die eigenen vier Wände wieder als stimmig, wohltuend und kraftspendend zu erleben. Vielleicht hörst du aber auch ständig ‚komische Geräusche‘, siehst Schatten vorbeihuschen oder fühlst dich irgendwie beobachtet. Egal was dich beschäftigt oder verunsichert – gemeinsam bringen wir wieder Ruhe und Harmonie in deine Räume.</p>
       <p>Die Reinigung erfolgt vor Ort und wird individuell auf die Gegebenheiten und Bedürfnisse des jeweiligen Raumes abgestimmt. Vor der Behandlung nehmen wir uns kurz Zeit, um deine Wahrnehmungen und Anliegen zu deinem Raum zu besprechen. So kann die energetische Arbeit gezielt auf die Bereiche ausgerichtet werden, die dir besonders am Herzen liegen.</p>
+      <ul class="step-facts">
+        <li><strong>Preis:</strong> ca. 250 €</li>
+      </ul>
+      <p>Wenn du dein Heim selbst energetisch reinigen möchtest, kannst du dich gerne in einem meiner <a href="kurse.html">Kurse</a> über verschiedene Methoden informieren.</p>
       
     </div>
 

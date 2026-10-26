@@ -391,7 +391,7 @@
       display: none;
     }
 
-    .submenu.open {
+    nav.main-nav .submenu.open {
       display: block;
     }
 
@@ -487,6 +487,18 @@
     color: var(--text);
     font-size: 1.15rem;
     padding: 3px 0;
+    display: flex;
+    align-items: baseline;
+    gap: 0.35em;
+  }
+
+  .page-content .grad-facts li strong {
+    flex: none;
+  }
+
+  .page-content .grad-facts li span {
+    flex: 1;
+    min-width: 0;
   }
 
   .page-content .grad-facts a {
@@ -732,6 +744,16 @@
     .legal-nav .legal-kontakt { display: none; }
     .page-content { min-width: 0; overflow-wrap: break-word; }
   }
+
+  /* Footer: Menü oben, Copyright darunter */
+  footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  footer > .legal-nav { order: 1; }
+  footer > span:first-child { order: 2; text-align: center; }
+  footer > .divider { display: none; }
 </style>
 </head>
 <body>
@@ -771,7 +793,6 @@
       <button class="submenu-toggle" aria-expanded="false" aria-label="Einweihungen Untermenü aufklappen"><span>▾</span></button>
       <ul class="submenu">
         <li><a href="einweihungen-usui-reiki.html">Usui Reiki</a></li>
-        <li><a href="einweihungen-kundalini-reiki.html">Kundalini Reiki</a></li>
         <li><a href="einweihungen-maria-magdalenas-licht.html">Maria-Magdalenas Licht</a></li>
         <li><a href="einweihungen-full-spectrum-healing.html"><span lang="en">Full Spectrum Healing</span></a></li>
         <li><a href="einweihungen-full-spectrum-light.html"><span lang="en">Full Spectrum Light</span></a></li>
@@ -794,34 +815,34 @@
       <h2 class="grad-title">1. Grad</h2>
       <p class="grad">Durch die Einweihung wird der Kanal für diese universelle Lebensenergie dauerhaft geöffnet, sodass du sie fortan dir selbst oder auch anderen Personen durch das Auflegen deiner Hände geben kannst. Nach der Einweihung steht dir die Reiki-Energie dauerhaft zur Verfügung – ganz ohne Verfallsdatum oder erneute Auffrischung. Beim 1. Grad liegt das Hauptaugenmerk auf dem physischen Körper.</p>
       <ul class="grad-facts">
-        <li><strong>Themen:</strong> Vorbeugung und Linderung von körperlichen Beschwerden einzelner Personen</li>
-        <li><strong>Voraussetzungen:</strong> keine</li>
-        <li><strong>Kursgebühr:</strong> 265 €</li>
-        <li><strong>Termine:</strong> siehe <a href="kurse.html">„Kurse“</a> oder auch nach individueller Absprache</li>
+        <li><strong>Themen:</strong><span>Vorbeugung und Linderung von körperlichen Beschwerden einzelner Personen</span></li>
+        <li><strong>Voraussetzungen:</strong><span>keine</span></li>
+        <li><strong>Kursgebühr:</strong><span>265 €</span></li>
+        <li><strong>Termine:</strong><span>siehe <a href="kurse.html">„Kurse“</a> oder auch nach individueller Absprache</span></li>
       </ul>
       <h2 class="grad-title">2. Grad</h2>
       <p class="grad">Bei der zweiten Einweihung werden erste Reiki Symbole vermittelt, neue Themen und die Einbeziehung des Mental- und Emotionalkörpers kommen hinzu.</p>
       <ul class="grad-facts">
-        <li><strong>Themen:</strong> Fernreiki, Reiki an Personengruppen und Situationen (Zukunft/Vergangenheit) schicken, Reinigung von Räumen</li>
-        <li><strong>Voraussetzungen:</strong> Einweihung USUI Reiki 1. Grad</li>
-        <li><strong>Kursgebühr:</strong> 365 €</li>
-        <li><strong>Termine:</strong> siehe <a href="kurse.html">„Kurse“</a> oder auch nach individueller Absprache</li>
+        <li><strong>Themen:</strong><span>Fernreiki, Reiki an Personengruppen und Situationen (Zukunft/Vergangenheit) schicken, Reinigung von Räumen</span></li>
+        <li><strong>Voraussetzungen:</strong><span>Einweihung USUI Reiki 1. Grad</span></li>
+        <li><strong>Kursgebühr:</strong><span>365 €</span></li>
+        <li><strong>Termine:</strong><span>siehe <a href="kurse.html">„Kurse“</a> oder auch nach individueller Absprache</span></li>
       </ul>
       <h2 class="grad-title">3. Grad</h2>
       <p class="grad">Dies ist der Meistergrad, bei dem nun auch die mediale Ebene aktiviert wird. Es kommen weitere Symbole und neue Themen zur Anwendung.</p>
       <ul class="grad-facts">
-        <li><strong>Themen:</strong> Senden an große Menschenmengen, geistige OPs möglich, stärkere Verbindung zur Urquelle, Führung durch geistige Welt, übersinnliche Wahrnehmungen sind möglich bzw. werden stärker</li>
-        <li><strong>Voraussetzungen:</strong> Einweihung USUI Reiki 2. Grad</li>
-        <li><strong>Kursgebühr:</strong> 1.250 €</li>
-        <li><strong>Termine:</strong> nach individueller Absprache</li>
+        <li><strong>Themen:</strong><span>Senden an große Menschenmengen, geistige OPs möglich, stärkere Verbindung zur Urquelle, Führung durch geistige Welt, übersinnliche Wahrnehmungen sind möglich bzw. werden stärker</span></li>
+        <li><strong>Voraussetzungen:</strong><span>Einweihung USUI Reiki 2. Grad</span></li>
+        <li><strong>Kursgebühr:</strong><span>1.250 €</span></li>
+        <li><strong>Termine:</strong><span>nach individueller Absprache</span></li>
       </ul>
       <h2 class="grad-title">4. Grad</h2>
       <p class="grad">Der letzte Reiki-Grad, in den du von mir eingeweiht werden kannst, ist der Lehrergrad. Dieser Grad ist nur für diejenigen bestimmt, die sich dazu berufen fühlen, Reiki an andere Menschen weiterzugeben. Auch bei diesem Grad werden neue Symbole weitergegeben.</p>
       <ul class="grad-facts">
-        <li><strong>Themen:</strong> Vermittlung der Einweihungsrituale</li>
-        <li><strong>Voraussetzungen:</strong> Einweihung USUI Reiki 3. Grad / Meistergrad</li>
-        <li><strong>Kursgebühr:</strong> 650 €</li>
-        <li><strong>Termine:</strong> nach individueller Absprache</li>
+        <li><strong>Themen:</strong><span>Vermittlung der Einweihungsrituale</span></li>
+        <li><strong>Voraussetzungen:</strong><span>Einweihung USUI Reiki 3. Grad / Meistergrad</span></li>
+        <li><strong>Kursgebühr:</strong><span>650 €</span></li>
+        <li><strong>Termine:</strong><span>nach individueller Absprache</span></li>
       </ul>
     </div>
 

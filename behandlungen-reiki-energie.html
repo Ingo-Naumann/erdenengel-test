@@ -391,7 +391,7 @@
       display: none;
     }
 
-    .submenu.open {
+    nav.main-nav .submenu.open {
       display: block;
     }
 
@@ -706,6 +706,16 @@
     .legal-nav .legal-kontakt { display: none; }
     .page-content { min-width: 0; overflow-wrap: break-word; }
   }
+
+  /* Footer: Menü oben, Copyright darunter */
+  footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  footer > .legal-nav { order: 1; }
+  footer > span:first-child { order: 2; text-align: center; }
+  footer > .divider { display: none; }
 </style>
 </head>
 <body>
@@ -745,7 +755,6 @@
       <button class="submenu-toggle" aria-expanded="false" aria-label="Einweihungen Untermenü aufklappen"><span>▾</span></button>
       <ul class="submenu">
         <li><a href="einweihungen-usui-reiki.html">Usui Reiki</a></li>
-        <li><a href="einweihungen-kundalini-reiki.html">Kundalini Reiki</a></li>
         <li><a href="einweihungen-maria-magdalenas-licht.html">Maria-Magdalenas Licht</a></li>
         <li><a href="einweihungen-full-spectrum-healing.html"><span lang="en">Full Spectrum Healing</span></a></li>
         <li><a href="einweihungen-full-spectrum-light.html"><span lang="en">Full Spectrum Light</span></a></li>
@@ -765,20 +774,6 @@
       <p>Bei einer Reiki- bzw. Energie-Behandlung wird die Lebensenergie (‚Ki‘ oder auch ‚Chi‘ genannt) wieder ins Fließen gebracht. Durch das behutsame Auflegen der Hände oder das Arbeiten im Energiefeld werden sowohl körperliche als auch emotionale Blockaden gelöst und die natürlichen Selbstheilungsprozesse des Körpers wieder in Gang gebracht.</p>
       <p>Viele Menschen empfinden Reiki als sehr angenehm und beruhigend und berichten, dass sie die Nächte nach einer Behandlung sehr gut geschlafen haben und sich energiegeladen fühlen. Einige, je nachdem wie feinfühlig der oder diejenige ist, spüren sogar wie sich während der Behandlung Wärme oder auch ein Kribbeln in ihrem Körper ausbreitet.</p>
       <p>Eine Reiki-Behandlung eignet sich als punktuelle Unterstützung in herausfordernden Lebensphasen, oder auch als regelmäßiger Bestandteil der eigenen Selbstfürsorge für mehr innerer Balance. Beide Herangehensweisen sind gleichermaßen sinnvoll – wichtig ist, dass die Behandlung zu deinen aktuellen Bedürfnissen passt.</p>
-      <p>Hierbei kann Reiki positiv auf Körper und Seele einwirken:</p>
-      <ul class="symptom-list">
-        <li>Stress &amp; Anspannung</li>
-        <li>Burnout &amp; Kraftlosigkeit</li>
-        <li>Schlafstörungen (auch als Einschlafhilfe bei Kindern zu empfehlen)</li>
-        <li>Nervosität &amp; Hibbeligkeit (auch bei Kindern)</li>
-        <li>Ängsten (z. Bsp. OP-Angst)</li>
-        <li>Emotionalen Herausforderungen</li>
-        <li>Schwachem Immunsystem</li>
-        <li>Hohem Blutdruck</li>
-        <li>Chronischen Schmerzen</li>
-        <li>Wundheilung &amp; Regeneration (z.Bsp. nach OP)</li>
-        <li>usw…</li>
-      </ul>
       <p>Wusstest du, dass Reiki mittlerweile sogar in einigen Kliniken wie zum Beispiel dem Unfall-Klinikum Berlin erfolgreich bei Patienten angewandt wird? Unter folgendem Link findest du einen kurzen Bericht vom rbb dazu:</p>
       <p><a href="https://www.youtube.com/watch?v=foGfDt_GeeI" target="_blank" rel="noopener">https://www.youtube.com/watch?v=foGfDt_GeeI</a></p>
       

@@ -391,7 +391,7 @@
       display: none;
     }
 
-    .submenu.open {
+    nav.main-nav .submenu.open {
       display: block;
     }
 
@@ -734,6 +734,16 @@
     .legal-nav .legal-kontakt { display: none; }
     .page-content { min-width: 0; overflow-wrap: break-word; }
   }
+
+  /* Footer: Menü oben, Copyright darunter */
+  footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  footer > .legal-nav { order: 1; }
+  footer > span:first-child { order: 2; text-align: center; }
+  footer > .divider { display: none; }
 </style>
 </head>
 <body>
@@ -773,7 +783,6 @@
       <button class="submenu-toggle" aria-expanded="false" aria-label="Einweihungen Untermenü aufklappen"><span>▾</span></button>
       <ul class="submenu">
         <li><a href="einweihungen-usui-reiki.html">Usui Reiki</a></li>
-        <li><a href="einweihungen-kundalini-reiki.html">Kundalini Reiki</a></li>
         <li><a href="einweihungen-maria-magdalenas-licht.html">Maria-Magdalenas Licht</a></li>
         <li><a href="einweihungen-full-spectrum-healing.html"><span lang="en">Full Spectrum Healing</span></a></li>
         <li><a href="einweihungen-full-spectrum-light.html"><span lang="en">Full Spectrum Light</span></a></li>
@@ -796,8 +805,8 @@
       <p>Die sanften Klänge und Vibrationen der Klangschalen bringen dich in einen tiefen Entspannungszustand und helfen dir dabei, den Stress in deinem Körper abzubauen.</p>
       <h2 class="step-title">2. <a href="behandlungen-aura-healing.html">Aurareinigung</a></h2>
       <p>Während du bereits deinen physischen Körper durch die Entgiftung von innen reinigst, helfe ich dir dabei, den ‚energetischen Schmutz‘ aus deinem Energiefeld zu entfernen.</p>
-      <h2 class="step-title">3. <a href="behandlungen-bemer-microzirkulation.html">BEMER-Matte</a></h2>
-      <p>Eine gesunde, hauptsächlich pflanzenbasierte Ernährung spielt für die Regeneration des Körpers während einer Entgiftung eine entscheidende Rolle. Doch damit die Vitamine, Mineralstoffe und Co. auch alle Bereiche des Körpers erreichen können, ist eine gute Durchblutung notwendig. Dabei unterstützen dich die Impulse der BEMER-Therapie, welche die Mikrozirkulation kleinster Blutgefäße wieder in Gang bringt.</p>
+      <h2 class="step-title">3. <a href="behandlungen-bemer-microzirkulation.html">BEMER-Anwendung</a></h2>
+      <p>Eine gesunde, hauptsächlich pflanzenbasierte Ernährung spielt für die Regeneration des Körpers während einer Entgiftung eine entscheidende Rolle. Doch damit die Vitamine, Mineralstoffe und Co. auch alle Bereiche des Körpers erreichen können, ist eine gute Durchblutung notwendig. Dabei unterstützen dich die Impulse der BEMER-Magnetfeldtherapie, welche die Mikrozirkulation kleinster Blutgefäße anregt und die Nährstoffe dort hingelangen können, wo sie gebraucht werden.</p>
       <ul class="step-facts">
         <li><strong>Zeitaufwand:</strong> 1,5 h</li>
         <li><strong>Preis:</strong> 111 €</li>

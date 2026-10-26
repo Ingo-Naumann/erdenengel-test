@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Einweihungen bei Erdenengel: Usui Reiki, Kundalini Reiki, Maria-Magdalenas Licht, Full Spectrum Healing und Light.">
+<meta name="description" content="Einweihungen bei Erdenengel: Usui Reiki, Maria-Magdalenas Licht, Full Spectrum Healing und Light.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Erdenengel – Praxis für Energiearbeit und Klangtherapie">
 <meta property="og:locale" content="de_DE">
 <meta property="og:title" content="Einweihungen – Erdenengel">
-<meta property="og:description" content="Einweihungen bei Erdenengel: Usui Reiki, Kundalini Reiki, Maria-Magdalenas Licht, Full Spectrum Healing und Light.">
+<meta property="og:description" content="Einweihungen bei Erdenengel: Usui Reiki, Maria-Magdalenas Licht, Full Spectrum Healing und Light.">
 <meta property="og:url" content="https://erdenengel-kathleen.de/einweihungen.html">
 <meta property="og:image" content="https://erdenengel-kathleen.de/images/header-og_web.jpg">
 <meta property="og:image:width" content="1200">
@@ -391,7 +391,7 @@
       display: none;
     }
 
-    .submenu.open {
+    nav.main-nav .submenu.open {
       display: block;
     }
 
@@ -682,6 +682,16 @@
     .legal-nav .legal-kontakt { display: none; }
     .page-content { min-width: 0; overflow-wrap: break-word; }
   }
+
+  /* Footer: Menü oben, Copyright darunter */
+  footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  footer > .legal-nav { order: 1; }
+  footer > span:first-child { order: 2; text-align: center; }
+  footer > .divider { display: none; }
 </style>
 </head>
 <body>
@@ -721,7 +731,6 @@
       <button class="submenu-toggle" aria-expanded="false" aria-label="Einweihungen Untermenü aufklappen"><span>▾</span></button>
       <ul class="submenu">
         <li><a href="einweihungen-usui-reiki.html">Usui Reiki</a></li>
-        <li><a href="einweihungen-kundalini-reiki.html">Kundalini Reiki</a></li>
         <li><a href="einweihungen-maria-magdalenas-licht.html">Maria-Magdalenas Licht</a></li>
         <li><a href="einweihungen-full-spectrum-healing.html"><span lang="en">Full Spectrum Healing</span></a></li>
         <li><a href="einweihungen-full-spectrum-light.html"><span lang="en">Full Spectrum Light</span></a></li>
@@ -744,7 +753,6 @@
       <p>In folgende Energien kannst du von mir eingeweiht werden:</p>
       <ul class="subservice-list">
         <li><a href="einweihungen-usui-reiki.html">Usui Reiki</a></li>
-        <li><a href="einweihungen-kundalini-reiki.html">Kundalini Reiki</a></li>
         <li><a href="einweihungen-maria-magdalenas-licht.html">Maria-Magdalenas Licht</a></li>
         <li><a href="einweihungen-full-spectrum-healing.html"><span lang="en">Full Spectrum Healing</span></a></li>
         <li><a href="einweihungen-full-spectrum-light.html"><span lang="en">Full Spectrum Light</span></a></li>

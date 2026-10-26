@@ -383,7 +383,7 @@
       display: none;
     }
 
-    .submenu.open {
+    nav.main-nav .submenu.open {
       display: block;
     }
 
@@ -649,6 +649,16 @@
     .legal-nav .legal-kontakt { display: none; }
     .page-content { min-width: 0; overflow-wrap: break-word; }
   }
+
+  /* Footer: Menü oben, Copyright darunter */
+  footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  footer > .legal-nav { order: 1; }
+  footer > span:first-child { order: 2; text-align: center; }
+  footer > .divider { display: none; }
 </style>
 </head>
 <body>
@@ -688,7 +698,6 @@
       <button class="submenu-toggle" aria-expanded="false" aria-label="Einweihungen Untermenü aufklappen"><span>▾</span></button>
       <ul class="submenu">
         <li><a href="einweihungen-usui-reiki.html">Usui Reiki</a></li>
-        <li><a href="einweihungen-kundalini-reiki.html">Kundalini Reiki</a></li>
         <li><a href="einweihungen-maria-magdalenas-licht.html">Maria-Magdalenas Licht</a></li>
         <li><a href="einweihungen-full-spectrum-healing.html"><span lang="en">Full Spectrum Healing</span></a></li>
         <li><a href="einweihungen-full-spectrum-light.html"><span lang="en">Full Spectrum Light</span></a></li>
@@ -725,7 +734,7 @@
       <h2>Bekannte Einschränkungen</h2>
       <ul class="info-list">
         <li><strong>Schmuckschriften:</strong> Einzelne Wörter und Anfangsbuchstaben sind in einer Schreibschrift gesetzt. Sie können schwerer lesbar sein. Für Vorlesesoftware sind sie normaler Text.</li>
-        <li><strong>Externe Inhalte:</strong> Für Inhalte auf Seiten Dritter, zum Beispiel Google Maps, WhatsApp oder verlinkte Videos, sind wir nicht verantwortlich. Sie sind möglicherweise nicht barrierefrei.</li>
+        <li><strong>Externe Inhalte:</strong> Für Inhalte auf Seiten Dritter, zum Beispiel Google Maps, OpenStreetMap, WhatsApp oder verlinkte Videos, sind wir nicht verantwortlich. Sie sind möglicherweise nicht barrierefrei.</li>
         <li><strong>Kalenderdateien:</strong> Die ICS-Dateien zum Download der Termine sind für Kalenderprogramme gedacht. Wie gut sie sich bedienen lassen, hängt vom jeweiligen Programm ab.</li>
       </ul>
 

@@ -391,7 +391,7 @@
       display: none;
     }
 
-    .submenu.open {
+    nav.main-nav .submenu.open {
       display: block;
     }
 
@@ -707,6 +707,16 @@
     .legal-nav .legal-kontakt { display: none; }
     .page-content { min-width: 0; overflow-wrap: break-word; }
   }
+
+  /* Footer: Menü oben, Copyright darunter */
+  footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  footer > .legal-nav { order: 1; }
+  footer > span:first-child { order: 2; text-align: center; }
+  footer > .divider { display: none; }
 </style>
 </head>
 <body>
@@ -746,7 +756,6 @@
       <button class="submenu-toggle" aria-expanded="false" aria-label="Einweihungen Untermenü aufklappen"><span>▾</span></button>
       <ul class="submenu">
         <li><a href="einweihungen-usui-reiki.html">Usui Reiki</a></li>
-        <li><a href="einweihungen-kundalini-reiki.html">Kundalini Reiki</a></li>
         <li><a href="einweihungen-maria-magdalenas-licht.html">Maria-Magdalenas Licht</a></li>
         <li><a href="einweihungen-full-spectrum-healing.html"><span lang="en">Full Spectrum Healing</span></a></li>
         <li><a href="einweihungen-full-spectrum-light.html"><span lang="en">Full Spectrum Light</span></a></li>
@@ -844,19 +853,20 @@
     </aside>
   </main>
 
+  <!-- Kundenstimmen-Bereich: vorbereitet, aber ausgeblendet, da noch keine Bewertung
+       für diese Behandlung vorliegt. Bei der PHP-Umsetzung wird dieser Abschnitt
+       dynamisch aus der Datenbank erzeugt und nur ausgegeben, wenn mindestens eine
+       Kundenstimme dieser Behandlungsseite zugeordnet ist. Struktur zum Aktivieren:
+
   <section class="testimonials">
     <h2>Erfahrungsberichte</h2>
 
     <div class="testimonial">
-      <p>Als ich mit einer starken Grippe völlig erschöpft im Bett lag und unter heftigen Kopf-, Stirn- und Kieferhöhlenschmerzen litt, durfte ich eine energetische Fernbehandlung bei Kathleen erleben.</p>
-      <p>Während der Anwendung habe ich bewusst wahrgenommen, was in meinem Körper passiert ist. Ich sah bunte Farben, spürte eine ungewohnte Kälte und einen Druck auf meinem Kopf – allerdings ganz anders als den Schmerz, den ich zuvor hatte. Obwohl die Behandlung aus der Ferne stattfand, fühlte es sich intensiv und sehr real an.</p>
-      <p>Kathleen nahm während der Sitzung verschiedene Blockaden wahr und arbeitete sich dabei durch unterschiedliche Bereiche meines Körpers – unter anderem an den Füßen und Armen. Ich selbst lag ruhig da und konnte mich ganz auf das einlassen, was sich gezeigt hat.</p>
-      <p>Besonders beeindruckend war für mich die Wirkung danach: Meine starken Kopfschmerzen waren direkt verschwunden und meine Genesung setzte deutlich schneller ein. Auch ein länger bestehender Schmerz in meinem Großzehengelenk hat sich nach der Behandlung spürbar verbessert und war plötzlich weg.</p>
-      <p>Im Anschluss zog Kathleen noch drei Karten und erklärte mir die Zusammenhänge zu dem, was sie während der Behandlung wahrgenommen hat. Ihre Worte haben mich tief berührt, weil sie genau Themen angesprochen haben, die mich aktuell innerlich beschäftigen.</p>
-      <p>Ich bin sehr dankbar für diese Erfahrung. Die Behandlung hat mir spürbar gutgetan und ich kann Kathleen von Herzen weiterempfehlen.</p>
-      <p class="signature">Sindy, April 2026</p>
+      <p>Text der Kundenstimme …</p>
+      <p class="signature">Name, Monat Jahr</p>
     </div>
   </section>
+  -->
 
   <footer>
     <span>&copy; <span id="jahr"></span> Erdenengel – Praxis für Energiearbeit und Klangtherapie</span>

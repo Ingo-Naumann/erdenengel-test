@@ -391,7 +391,7 @@
       display: none;
     }
 
-    .submenu.open {
+    nav.main-nav .submenu.open {
       display: block;
     }
 
@@ -702,6 +702,16 @@
     .legal-nav .legal-kontakt { display: none; }
     .page-content { min-width: 0; overflow-wrap: break-word; }
   }
+
+  /* Footer: Menü oben, Copyright darunter */
+  footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  footer > .legal-nav { order: 1; }
+  footer > span:first-child { order: 2; text-align: center; }
+  footer > .divider { display: none; }
 </style>
 </head>
 <body>
@@ -741,7 +751,6 @@
       <button class="submenu-toggle" aria-expanded="false" aria-label="Einweihungen Untermenü aufklappen"><span>▾</span></button>
       <ul class="submenu">
         <li><a href="einweihungen-usui-reiki.html">Usui Reiki</a></li>
-        <li><a href="einweihungen-kundalini-reiki.html">Kundalini Reiki</a></li>
         <li><a href="einweihungen-maria-magdalenas-licht.html">Maria-Magdalenas Licht</a></li>
         <li><a href="einweihungen-full-spectrum-healing.html"><span lang="en">Full Spectrum Healing</span></a></li>
         <li><a href="einweihungen-full-spectrum-light.html"><span lang="en">Full Spectrum Light</span></a></li>
@@ -763,20 +772,6 @@
       <p>Wie intensiv und detailreich sich die Rückführung gestaltet, ist von Mensch zu Mensch unterschiedlich und hängt unter anderem von der eigenen Offenheit sowie dem jeweiligen Thema ab. In einem Vorgespräch klären wir gemeinsam, welche Fragestellung im Mittelpunkt der Sitzung stehen soll.</p>
       <p>Im Anschluss nehmen wir uns gemeinsam Zeit, das Erlebte in Ruhe zu besprechen und einzuordnen, damit die gewonnenen Erkenntnisse auch im Alltag wirksam werden können.</p>
       <p>Die Wirkung einer Rückführung entfaltet sich häufig nicht nur im Moment des Erlebens und Erkennens, sondern auch in den Wochen danach, wenn sich alte Muster allmählich lösen. Ein achtsamer Umgang mit sich selbst ist daher nach der Behandlung besonders wichtig.</p>
-      <p>Eine Rückführung kann beispielsweise bei folgenden Themen weiterhelfen:</p>
-      <ul class="symptom-list">
-        <li>Raucherentwöhnung</li>
-        <li>Gewichtsreduktion</li>
-        <li>Lösen von Ängsten (z.Bsp. OP- Angst, Flug-Angst etc.)</li>
-        <li>Allergien</li>
-        <li>Hauterkrankungen</li>
-        <li>Traumabewältigung</li>
-        <li>chronische &amp; wiederkehrende Beschwerden</li>
-        <li>Schlafstörungen</li>
-        <li>Loslassen alter Beziehungen</li>
-        <li>Karmische Themen</li>
-      </ul>
-      
     </div>
 
     <aside class="sidebar">
