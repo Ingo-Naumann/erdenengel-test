@@ -327,7 +327,23 @@
     transform: rotate(180deg);
   }
 
-  @media (max-width: 800px) {
+  /* Mittlere Breiten: Menü etwas kompakter, damit es einzeilig bleibt */
+  @media (min-width: 961px) and (max-width: 1240px) {
+    nav.main-nav a {
+      padding: 22px 14px;
+      letter-spacing: 0.08em;
+      font-size: 0.9rem;
+    }
+
+    nav.main-nav .submenu a {
+      padding: 10px 24px;
+      font-size: 0.95rem;
+      letter-spacing: 0.08em;
+    }
+  }
+
+  /* Hamburger-Menü bis 960px Breite */
+  @media (max-width: 960px) {
     .nav-toggle {
       display: flex;
     }
@@ -586,6 +602,16 @@
     margin-bottom: 0;
   }
 
+  /* Größerer Abstand zwischen zwei Erfahrungsberichten */
+  .testimonial + .testimonial {
+    margin-top: 64px;
+  }
+
+  /* Bericht ohne Abstände zwischen den Textabsätzen */
+  .content .testimonial.testimonial-text p {
+    margin-bottom: 0;
+  }
+
   .testimonial .signature {
     margin-top: 16px;
     font-style: italic;
@@ -648,6 +674,43 @@
   footer > .legal-nav { order: 1; }
   footer > span:first-child { order: 2; text-align: center; }
   footer > .divider { display: none; }
+  /* Nach-oben-Button (erscheint erst beim Scrollen) */
+  .to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--cream);
+    border: 1px solid #e3dccd;
+    box-shadow: 0 2px 8px rgba(111, 101, 87, 0.18);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    z-index: 900;
+  }
+
+  .to-top.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .to-top:hover,
+  .to-top:focus-visible {
+    border-color: var(--accent);
+  }
+
+  .to-top svg {
+    width: 18px;
+    height: 18px;
+  }
 </style>
 </head>
 <body>
@@ -672,14 +735,14 @@
       <button class="submenu-toggle" aria-expanded="false" aria-label="Behandlungen Untermenü aufklappen"><span>▾</span></button>
       <ul class="submenu">
         <li><a href="behandlungen-klangschalentherapie.html">Klangschalentherapie</a></li>
-        <li><a href="behandlungen-reiki-energie.html">Reiki / Energie-Behandlung</a></li>
+        <li><a href="behandlungen-reiki-energie.html">Reiki / Energiebehandlung</a></li>
         <li><a href="behandlungen-aura-healing.html">Aura-Healing</a></li>
         <li><a href="behandlungen-rueckfuehrungstherapie.html">Rückführungstherapie</a></li>
         <li><a href="behandlungen-wirbelsaeulenaufrichtung.html">Geistige Wirbelsäulenaufrichtung</a></li>
         <li><a href="behandlungen-ahnenheilung.html">Ahnenheilung</a></li>
         <li><a href="behandlungen-energetische-hausreinigung.html">Energetische Hausreinigung</a></li>
         <li><a href="behandlungen-energetic-detox.html">Energetic Detox</a></li>
-        <li><a href="behandlungen-bemer-microzirkulation.html">Bemer Micro Zirkulation</a></li>
+        <li><a href="behandlungen-bemer-magnetfeldtherapie.html">BEMER Magnetfeldtherapie</a></li>
         <li><a href="behandlungen-lebensberatung.html">Lebensberatung</a></li>
         <li><a href="behandlungen-gutscheine.html">Gutscheine</a></li>
       </ul>
@@ -720,6 +783,14 @@
           <p>Ich habe mich bei Kathleen vom ersten Moment an gesehen und gut aufgehoben gefühlt. Mit ihrer liebevollen und empathischen Art schafft sie sofort eine vertrauensvolle Atmosphäre. Es hat mich beeindruckt, wie viele kleine Ansätze sie mir mitgeben konnte, die ich für mich in der nächsten Zeit angehen kann. Die Auraanalyse war für mich unglaublich spannend und hat mir wertvolle Einblicke in mein Energiesystem gebracht. Auch die Reiki-Behandlung selbst habe ich als sehr kraftvoll und wohltuend empfunden. Durch Kathleens Unterstützung habe ich neue Zuversicht gewonnen und fühle mich gestärkt. Ich habe in ihr eine wunderbare Ansprechpartnerin gefunden, die einem mit Herz, Rat und Tat zur Seite steht.</p>
           <p>Danke für dein Wirken liebe Kathleen!</p>
           <p class="signature">Lucinda, März 2026</p>
+        </div>
+
+        <div class="testimonial testimonial-text">
+          <p>Im November 2025 war ich zum ersten Mal bei Kathleen. Ich habe sie als sehr einfühlsamen, warmherzigen und zugleich angenehm unaufgeregten Menschen erlebt. Sie schafft eine Atmosphäre, in der schnell Vertrauen entsteht und alles sein darf. Keine Frage ist ihr zu ungewöhnlich, kein Anliegen zu „verrückt“. Sie begegnet allem offen und vollkommen wertfrei.</p>
+          <p>Meine erste Sitzung war unglaublich beeindruckend – fast unbegreiflich, was Kathleen wahrgenommen und welche energetischen Verbindungen sie gelöst hat. Was mich am meisten berührt, ist jedoch, was sich in den Monaten danach bei mir verändert hat. Die großen Ängste, mit denen ich zu ihr gekommen war und die sich für mich nicht einmal ausschließlich wie meine eigenen anfühlten, waren nach einigen Wochen verschwunden – und sind es bis heute.</p>
+          <p>Im März 2026 war ich erneut bei Kathleen, weil ich gespürt habe, wie wertvoll, unterstützend und wegweisend ihre Energiearbeit für meine persönliche Entwicklung ist. Ich fühle mich heute viel mehr bei mir selbst, innerlich gefestigt und angekommen. Es ist, als hätte ich mit Kathleens Hilfe Schritt für Schritt mehr Zugang zu meinem eigenen Licht gefunden und den Mut, es leuchten zu lassen.</p>
+          <p>Rückblickend bin ich sehr dankbar, mich auf diese Erfahrung eingelassen zu haben. Sie war für mich der Beginn einer tiefgreifenden Entwicklung, die weit über die eigentlichen Sitzungen hinausgeht. Dafür bin ich Kathleen von ganzem Herzen dankbar. Und ich bin neugierig, wohin die Reise noch führt – vieles scheint möglich!</p>
+          <p class="signature">Katja, Oktober 2026</p>
         </div>
       </section>
     </div>
@@ -816,6 +887,40 @@
           var open = submenu.classList.toggle('open');
           btn.setAttribute('aria-expanded', open ? 'true' : 'false');
         });
+      });
+    })();
+  </script>
+
+  <button type="button" class="to-top" id="toTop" aria-label="Nach oben scrollen" title="Nach oben">
+    <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3 12l6-6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <script>
+    (function () {
+      var btn = document.getElementById('toTop');
+      if (!btn) return;
+      function toggle() { btn.classList.toggle('visible', window.pageYOffset > 400); }
+      window.addEventListener('scroll', toggle, { passive: true });
+      toggle();
+      // Klick: Seite scrollt automatisch ganz nach oben (eigene Animation, ca. 1,2 bis 3 Sekunden)
+      var running = false;
+      function cancelScroll() { running = false; }
+      ['wheel', 'touchstart', 'keydown'].forEach(function (ev) {
+        window.addEventListener(ev, cancelScroll, { passive: true });
+      });
+      btn.addEventListener('click', function () {
+        var start = window.pageYOffset;
+        if (!start) return;
+        var duration = Math.min(3000, 1200 + start * 0.3), t0 = null;
+        running = true;
+        function step(t) {
+          if (!running) return;
+          if (t0 === null) t0 = t;
+          var p = Math.min(1, (t - t0) / duration);
+          var ease = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+          window.scrollTo(0, Math.round(start * (1 - ease)));
+          if (p < 1) window.requestAnimationFrame(step); else running = false;
+        }
+        window.requestAnimationFrame(step);
       });
     })();
   </script>

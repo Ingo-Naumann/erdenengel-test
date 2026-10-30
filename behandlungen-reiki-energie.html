@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Reiki- und Energie-Behandlung in Eberswalde: Lebensenergie aktivieren, Blockaden lösen, Selbstheilungskräfte unterstützen.">
+<meta name="description" content="Reiki- und Energiebehandlung in Eberswalde: Lebensenergie aktivieren, Blockaden lösen, Selbstheilungskräfte unterstützen.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Erdenengel – Praxis für Energiearbeit und Klangtherapie">
 <meta property="og:locale" content="de_DE">
-<meta property="og:title" content="Reiki / Energie-Behandlung – Erdenengel">
-<meta property="og:description" content="Reiki- und Energie-Behandlung in Eberswalde: Lebensenergie aktivieren, Blockaden lösen, Selbstheilungskräfte unterstützen.">
+<meta property="og:title" content="Reiki / Energiebehandlung – Erdenengel">
+<meta property="og:description" content="Reiki- und Energiebehandlung in Eberswalde: Lebensenergie aktivieren, Blockaden lösen, Selbstheilungskräfte unterstützen.">
 <meta property="og:url" content="https://erdenengel-kathleen.de/behandlungen-reiki-energie.html">
 <meta property="og:image" content="https://erdenengel-kathleen.de/images/header-og_web.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<title>Reiki / Energie-Behandlung – Erdenengel</title>
+<title>Reiki / Energiebehandlung – Erdenengel</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -325,7 +325,23 @@
     transform: rotate(180deg);
   }
 
-  @media (max-width: 800px) {
+  /* Mittlere Breiten: Menü etwas kompakter, damit es einzeilig bleibt */
+  @media (min-width: 961px) and (max-width: 1240px) {
+    nav.main-nav a {
+      padding: 22px 14px;
+      letter-spacing: 0.08em;
+      font-size: 0.9rem;
+    }
+
+    nav.main-nav .submenu a {
+      padding: 10px 24px;
+      font-size: 0.95rem;
+      letter-spacing: 0.08em;
+    }
+  }
+
+  /* Hamburger-Menü bis 960px Breite */
+  @media (max-width: 960px) {
     .nav-toggle {
       display: flex;
     }
@@ -716,6 +732,43 @@
   footer > .legal-nav { order: 1; }
   footer > span:first-child { order: 2; text-align: center; }
   footer > .divider { display: none; }
+  /* Nach-oben-Button (erscheint erst beim Scrollen) */
+  .to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--cream);
+    border: 1px solid #e3dccd;
+    box-shadow: 0 2px 8px rgba(111, 101, 87, 0.18);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    z-index: 900;
+  }
+
+  .to-top.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .to-top:hover,
+  .to-top:focus-visible {
+    border-color: var(--accent);
+  }
+
+  .to-top svg {
+    width: 18px;
+    height: 18px;
+  }
 </style>
 </head>
 <body>
@@ -738,14 +791,14 @@
       <button class="submenu-toggle" aria-expanded="false" aria-label="Behandlungen Untermenü aufklappen"><span>▾</span></button>
       <ul class="submenu">
         <li><a href="behandlungen-klangschalentherapie.html">Klangschalentherapie</a></li>
-        <li><a href="behandlungen-reiki-energie.html">Reiki / Energie-Behandlung</a></li>
+        <li><a href="behandlungen-reiki-energie.html">Reiki / Energiebehandlung</a></li>
         <li><a href="behandlungen-aura-healing.html">Aura-Healing</a></li>
         <li><a href="behandlungen-rueckfuehrungstherapie.html">Rückführungstherapie</a></li>
         <li><a href="behandlungen-wirbelsaeulenaufrichtung.html">Geistige Wirbelsäulenaufrichtung</a></li>
         <li><a href="behandlungen-ahnenheilung.html">Ahnenheilung</a></li>
         <li><a href="behandlungen-energetische-hausreinigung.html">Energetische Hausreinigung</a></li>
         <li><a href="behandlungen-energetic-detox.html">Energetic Detox</a></li>
-        <li><a href="behandlungen-bemer-microzirkulation.html">Bemer Micro Zirkulation</a></li>
+        <li><a href="behandlungen-bemer-magnetfeldtherapie.html">BEMER Magnetfeldtherapie</a></li>
         <li><a href="behandlungen-lebensberatung.html">Lebensberatung</a></li>
         <li><a href="behandlungen-gutscheine.html">Gutscheine</a></li>
       </ul>
@@ -768,10 +821,10 @@
   <main>
     <div class="page-content">
       <img class="page-image" width="640" height="640" loading="lazy" decoding="async" src="images/energiebehandlung_web.jpg" alt="Reiki-Behandlung: Hände einer Behandlerin leiten Energie über dem Kopf einer entspannt liegenden Person, umgeben von einer Lotusblüte">
-      <div class="breadcrumb"><a href="behandlungen.html">Behandlungen</a> / Reiki / Energie-Behandlung</div>
-      <h1>Reiki / Energie-Behandlung</h1>
+      <div class="breadcrumb"><a href="behandlungen.html">Behandlungen</a> / Reiki / Energiebehandlung</div>
+      <h1>Reiki / Energie&shy;behandlung</h1>
       <p class="intro-line">… <span class="script-word"><span class="initial">R</span>ei</span> universelle <span class="script-word"><span class="initial">K</span>i</span> Lebensenergie</p>
-      <p>Bei einer Reiki- bzw. Energie-Behandlung wird die Lebensenergie (‚Ki‘ oder auch ‚Chi‘ genannt) wieder ins Fließen gebracht. Durch das behutsame Auflegen der Hände oder das Arbeiten im Energiefeld werden sowohl körperliche als auch emotionale Blockaden gelöst und die natürlichen Selbstheilungsprozesse des Körpers wieder in Gang gebracht.</p>
+      <p>Bei einer Reiki- bzw. Energiebehandlung wird die Lebensenergie (‚Ki‘ oder auch ‚Chi‘ genannt) wieder ins Fließen gebracht. Durch das behutsame Auflegen der Hände oder das Arbeiten im Energiefeld werden sowohl körperliche als auch emotionale Blockaden gelöst und die natürlichen Selbstheilungsprozesse des Körpers wieder in Gang gebracht.</p>
       <p>Viele Menschen empfinden Reiki als sehr angenehm und beruhigend und berichten, dass sie die Nächte nach einer Behandlung sehr gut geschlafen haben und sich energiegeladen fühlen. Einige, je nachdem wie feinfühlig der oder diejenige ist, spüren sogar wie sich während der Behandlung Wärme oder auch ein Kribbeln in ihrem Körper ausbreitet.</p>
       <p>Eine Reiki-Behandlung eignet sich als punktuelle Unterstützung in herausfordernden Lebensphasen, oder auch als regelmäßiger Bestandteil der eigenen Selbstfürsorge für mehr innerer Balance. Beide Herangehensweisen sind gleichermaßen sinnvoll – wichtig ist, dass die Behandlung zu deinen aktuellen Bedürfnissen passt.</p>
       <p>Wusstest du, dass Reiki mittlerweile sogar in einigen Kliniken wie zum Beispiel dem Unfall-Klinikum Berlin erfolgreich bei Patienten angewandt wird? Unter folgendem Link findest du einen kurzen Bericht vom rbb dazu:</p>
@@ -885,6 +938,40 @@
           var open = submenu.classList.toggle('open');
           btn.setAttribute('aria-expanded', open ? 'true' : 'false');
         });
+      });
+    })();
+  </script>
+
+  <button type="button" class="to-top" id="toTop" aria-label="Nach oben scrollen" title="Nach oben">
+    <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3 12l6-6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <script>
+    (function () {
+      var btn = document.getElementById('toTop');
+      if (!btn) return;
+      function toggle() { btn.classList.toggle('visible', window.pageYOffset > 400); }
+      window.addEventListener('scroll', toggle, { passive: true });
+      toggle();
+      // Klick: Seite scrollt automatisch ganz nach oben (eigene Animation, ca. 1,2 bis 3 Sekunden)
+      var running = false;
+      function cancelScroll() { running = false; }
+      ['wheel', 'touchstart', 'keydown'].forEach(function (ev) {
+        window.addEventListener(ev, cancelScroll, { passive: true });
+      });
+      btn.addEventListener('click', function () {
+        var start = window.pageYOffset;
+        if (!start) return;
+        var duration = Math.min(3000, 1200 + start * 0.3), t0 = null;
+        running = true;
+        function step(t) {
+          if (!running) return;
+          if (t0 === null) t0 = t;
+          var p = Math.min(1, (t - t0) / duration);
+          var ease = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+          window.scrollTo(0, Math.round(start * (1 - ease)));
+          if (p < 1) window.requestAnimationFrame(step); else running = false;
+        }
+        window.requestAnimationFrame(step);
       });
     })();
   </script>

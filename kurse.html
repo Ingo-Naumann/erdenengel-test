@@ -325,7 +325,23 @@
     transform: rotate(180deg);
   }
 
-  @media (max-width: 800px) {
+  /* Mittlere Breiten: Menü etwas kompakter, damit es einzeilig bleibt */
+  @media (min-width: 961px) and (max-width: 1240px) {
+    nav.main-nav a {
+      padding: 22px 14px;
+      letter-spacing: 0.08em;
+      font-size: 0.9rem;
+    }
+
+    nav.main-nav .submenu a {
+      padding: 10px 24px;
+      font-size: 0.95rem;
+      letter-spacing: 0.08em;
+    }
+  }
+
+  /* Hamburger-Menü bis 960px Breite */
+  @media (max-width: 960px) {
     .nav-toggle {
       display: flex;
     }
@@ -515,6 +531,70 @@
     background: var(--accent);
     color: var(--white);
     border-color: var(--accent);
+  }
+
+  /* Nach-oben-Button (erscheint erst beim Scrollen) */
+  .to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--cream);
+    border: 1px solid #e3dccd;
+    box-shadow: 0 2px 8px rgba(111, 101, 87, 0.18);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    z-index: 900;
+  }
+
+  .to-top.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .to-top:hover,
+  .to-top:focus-visible {
+    border-color: var(--accent);
+  }
+
+  .to-top svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .filter-select { display: none; }
+
+  /* Schmale Bildschirme: Filter als Dropdown-Menü statt Buttons */
+  @media (max-width: 1000px) {
+    .filters .filter-btn { display: none; }
+    .filter-select {
+      display: block;
+      flex: 1 1 auto;
+      min-width: 0;
+      font-family: 'font3', serif;
+      font-size: 1rem;
+      color: var(--text-dark);
+      background-color: var(--white);
+      border: 1px solid #d8cfbd;
+      border-radius: 20px;
+      padding: 8px 40px 8px 16px;
+      cursor: pointer;
+      -webkit-appearance: none;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%238b713f' stroke-width='1.5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+    }
+    .filter-select:focus { outline: none; border-color: var(--accent); }
   }
 
   .course-list {
@@ -804,6 +884,16 @@
     .course-list .course-status { width: 100%; }
   }
 
+  /* Mittlere Breiten (Tablet): Terminliste umbrechen, damit die Seite nicht breiter als der Bildschirm wird */
+  @media (max-width: 1000px) {
+    .page-content { min-width: 0; }
+    .course-list li { flex-wrap: wrap; gap: 6px 20px; }
+    .course-list .course-name { flex: 1 1 100%; }
+    .course-list .course-datetime { width: auto; flex: 1 1 150px; }
+    .course-list .course-price { width: auto; flex: 0 0 auto; text-align: left; }
+    .course-list .course-status { width: 100%; }
+  }
+
   /* Footer: Menü oben, Copyright darunter */
   footer {
     flex-direction: column;
@@ -835,14 +925,14 @@
       <button class="submenu-toggle" aria-expanded="false" aria-label="Behandlungen Untermenü aufklappen"><span>▾</span></button>
       <ul class="submenu">
         <li><a href="behandlungen-klangschalentherapie.html">Klangschalentherapie</a></li>
-        <li><a href="behandlungen-reiki-energie.html">Reiki / Energie-Behandlung</a></li>
+        <li><a href="behandlungen-reiki-energie.html">Reiki / Energiebehandlung</a></li>
         <li><a href="behandlungen-aura-healing.html">Aura-Healing</a></li>
         <li><a href="behandlungen-rueckfuehrungstherapie.html">Rückführungstherapie</a></li>
         <li><a href="behandlungen-wirbelsaeulenaufrichtung.html">Geistige Wirbelsäulenaufrichtung</a></li>
         <li><a href="behandlungen-ahnenheilung.html">Ahnenheilung</a></li>
         <li><a href="behandlungen-energetische-hausreinigung.html">Energetische Hausreinigung</a></li>
         <li><a href="behandlungen-energetic-detox.html">Energetic Detox</a></li>
-        <li><a href="behandlungen-bemer-microzirkulation.html">Bemer Micro Zirkulation</a></li>
+        <li><a href="behandlungen-bemer-magnetfeldtherapie.html">BEMER Magnetfeldtherapie</a></li>
         <li><a href="behandlungen-lebensberatung.html">Lebensberatung</a></li>
         <li><a href="behandlungen-gutscheine.html">Gutscheine</a></li>
       </ul>
@@ -869,6 +959,8 @@
       <p class="intro-line">…du bist Teil eines <span class="script-word"><span class="initial">G</span>roßen <span class="initial">G</span>anzen</span></p>
       <p>Ich biete regelmäßig Einweihungen, Kurse und Workshops rund um Energiearbeit, Selbstfürsorge und spirituelle Entwicklung an. Ob als Einstieg für Neugierige oder als Vertiefung für bereits Erfahrene – hier findest du eine Übersicht der nächsten anstehenden Termine. Schreib mir auch gerne, wenn du eigene Wünsche und Ideen zu Kursthemen hast die dich interessieren.</p>
 
+      <p>Die Plätze sind begrenzt – melde dich bei Interesse gerne frühzeitig über die <a href="terminanfrage.html" style="color: var(--accent);">Terminanfrage</a> oder direkt telefonisch an.</p>
+
       <p class="section-heading">Frauenkreise:</p>
       <p>Einmal im Monat hast du bei mir die Möglichkeit, dich mit Gleichgesinnten zu treffen, Erfahrungen auszutauschen oder neue Erfahrungen zu machen. Du kannst zur Ruhe kommen in einer Atmosphäre von Geborgenheit, Wertschätzung und Verständnis für das was du bist. Ob gemeinsame Rituale, Meditationen oder tiefgehende Gespräche … es wird sich zeigen was gerade gebraucht wird.</p>
       <p>Wenn du dich angesprochen fühlst, schreib mich gerne an, damit ich entsprechend der Teilnehmerinnen den Raum vorbereiten kann. Dieses Angebot ist kostenfrei.</p>
@@ -880,6 +972,13 @@
         <button class="filter-btn" data-filter="frauenkreis">Frauenkreise</button>
         <button class="filter-btn" data-filter="klangreise">Klangreisen</button>
         <button class="filter-btn" data-filter="kurs">Kurse & Seminare</button>
+        <select class="filter-select" id="filterSelect" aria-label="Nach Kursart filtern">
+          <option value="alle">Alle</option>
+          <option value="einweihung">Einweihungen</option>
+          <option value="frauenkreis">Frauenkreise</option>
+          <option value="klangreise">Klangreisen</option>
+          <option value="kurs">Kurse &amp; Seminare</option>
+        </select>
       </div>
 
       <p class="section-heading termine-heading">Termine 2026</p>
@@ -961,6 +1060,15 @@
           </span>
           <span class="course-price">0 €</span>
           <span class="course-status"><a class="calendar-link" href="kalender/2027-01-15_frauenkreis.ics" download>Kalendereintrag herunterladen</a></span>
+        </li>
+        <li data-cat="kurs">
+          <span class="course-name"><span class="course-label">Kurse & Seminare</span>Hausreinigungsseminar</span>
+          <span class="course-datetime">
+            <span class="course-date">Sa, 16. Januar 2027</span>
+            <span class="course-time">ab 14:00 Uhr</span>
+          </span>
+          <span class="course-price"></span>
+          <span class="course-status"><a class="calendar-link" href="kalender/2027-01-16_hausreinigungsseminar.ics" download>Kalendereintrag herunterladen</a></span>
         </li>
         <li data-cat="klangreise">
           <span class="course-name">Klangreise<span class="course-subline">(bitte spätestens 10 Minuten vorher da sein, damit wir pünktlich beginnen können)</span></span>
@@ -1180,8 +1288,6 @@
         </li>
       </ul>
 
-      <p style="margin-top: 22px;">Die Plätze sind begrenzt – melde dich bei Interesse gerne frühzeitig über die <a href="terminanfrage.html" style="color: var(--accent);">Terminanfrage</a> oder direkt telefonisch an.</p>
-      
     </div>
 
     <aside class="sidebar">
@@ -1300,16 +1406,57 @@
         });
       }
 
-      filterBtns.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          var filter = btn.dataset.filter;
-          filterBtns.forEach(function (b) { b.classList.toggle('active', b.dataset.filter === filter); });
-          termine.forEach(function (item) {
-            var match = filter === 'alle' || item.dataset.cat === filter;
-            item.classList.toggle('hidden', !match);
-          });
-          updateYearVisibility();
+      var filterSelect = document.getElementById('filterSelect');
+
+      function applyFilter(filter) {
+        filterBtns.forEach(function (b) { b.classList.toggle('active', b.dataset.filter === filter); });
+        if (filterSelect) filterSelect.value = filter;
+        termine.forEach(function (item) {
+          var match = filter === 'alle' || item.dataset.cat === filter;
+          item.classList.toggle('hidden', !match);
         });
+        updateYearVisibility();
+      }
+
+      filterBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () { applyFilter(btn.dataset.filter); });
+      });
+      if (filterSelect) {
+        filterSelect.addEventListener('change', function () { applyFilter(filterSelect.value); });
+      }
+    })();
+  </script>
+
+  <button type="button" class="to-top" id="toTop" aria-label="Nach oben scrollen" title="Nach oben">
+    <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3 12l6-6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <script>
+    (function () {
+      var btn = document.getElementById('toTop');
+      if (!btn) return;
+      function toggle() { btn.classList.toggle('visible', window.pageYOffset > 400); }
+      window.addEventListener('scroll', toggle, { passive: true });
+      toggle();
+      // Klick: Seite scrollt automatisch ganz nach oben (eigene Animation, ca. 1,2 bis 3 Sekunden)
+      var running = false;
+      function cancelScroll() { running = false; }
+      ['wheel', 'touchstart', 'keydown'].forEach(function (ev) {
+        window.addEventListener(ev, cancelScroll, { passive: true });
+      });
+      btn.addEventListener('click', function () {
+        var start = window.pageYOffset;
+        if (!start) return;
+        var duration = Math.min(3000, 1200 + start * 0.3), t0 = null;
+        running = true;
+        function step(t) {
+          if (!running) return;
+          if (t0 === null) t0 = t;
+          var p = Math.min(1, (t - t0) / duration);
+          var ease = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+          window.scrollTo(0, Math.round(start * (1 - ease)));
+          if (p < 1) window.requestAnimationFrame(step); else running = false;
+        }
+        window.requestAnimationFrame(step);
       });
     })();
   </script>

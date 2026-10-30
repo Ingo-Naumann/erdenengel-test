@@ -325,7 +325,23 @@
     transform: rotate(180deg);
   }
 
-  @media (max-width: 800px) {
+  /* Mittlere Breiten: Menü etwas kompakter, damit es einzeilig bleibt */
+  @media (min-width: 961px) and (max-width: 1240px) {
+    nav.main-nav a {
+      padding: 22px 14px;
+      letter-spacing: 0.08em;
+      font-size: 0.9rem;
+    }
+
+    nav.main-nav .submenu a {
+      padding: 10px 24px;
+      font-size: 0.95rem;
+      letter-spacing: 0.08em;
+    }
+  }
+
+  /* Hamburger-Menü bis 960px Breite */
+  @media (max-width: 960px) {
     .nav-toggle {
       display: flex;
     }
@@ -715,6 +731,43 @@
   footer > .legal-nav { order: 1; }
   footer > span:first-child { order: 2; text-align: center; }
   footer > .divider { display: none; }
+  /* Nach-oben-Button (erscheint erst beim Scrollen) */
+  .to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--cream);
+    border: 1px solid #e3dccd;
+    box-shadow: 0 2px 8px rgba(111, 101, 87, 0.18);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    z-index: 900;
+  }
+
+  .to-top.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .to-top:hover,
+  .to-top:focus-visible {
+    border-color: var(--accent);
+  }
+
+  .to-top svg {
+    width: 18px;
+    height: 18px;
+  }
 </style>
 </head>
 <body>
@@ -737,14 +790,14 @@
       <button class="submenu-toggle" aria-expanded="false" aria-label="Behandlungen Untermenü aufklappen"><span>▾</span></button>
       <ul class="submenu">
         <li><a href="behandlungen-klangschalentherapie.html">Klangschalentherapie</a></li>
-        <li><a href="behandlungen-reiki-energie.html">Reiki / Energie-Behandlung</a></li>
+        <li><a href="behandlungen-reiki-energie.html">Reiki / Energiebehandlung</a></li>
         <li><a href="behandlungen-aura-healing.html">Aura-Healing</a></li>
         <li><a href="behandlungen-rueckfuehrungstherapie.html">Rückführungstherapie</a></li>
         <li><a href="behandlungen-wirbelsaeulenaufrichtung.html">Geistige Wirbelsäulenaufrichtung</a></li>
         <li><a href="behandlungen-ahnenheilung.html">Ahnenheilung</a></li>
         <li><a href="behandlungen-energetische-hausreinigung.html">Energetische Hausreinigung</a></li>
         <li><a href="behandlungen-energetic-detox.html">Energetic Detox</a></li>
-        <li><a href="behandlungen-bemer-microzirkulation.html">Bemer Micro Zirkulation</a></li>
+        <li><a href="behandlungen-bemer-magnetfeldtherapie.html">BEMER Magnetfeldtherapie</a></li>
         <li><a href="behandlungen-lebensberatung.html">Lebensberatung</a></li>
         <li><a href="behandlungen-gutscheine.html">Gutscheine</a></li>
       </ul>
@@ -874,6 +927,40 @@
           var open = submenu.classList.toggle('open');
           btn.setAttribute('aria-expanded', open ? 'true' : 'false');
         });
+      });
+    })();
+  </script>
+
+  <button type="button" class="to-top" id="toTop" aria-label="Nach oben scrollen" title="Nach oben">
+    <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3 12l6-6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <script>
+    (function () {
+      var btn = document.getElementById('toTop');
+      if (!btn) return;
+      function toggle() { btn.classList.toggle('visible', window.pageYOffset > 400); }
+      window.addEventListener('scroll', toggle, { passive: true });
+      toggle();
+      // Klick: Seite scrollt automatisch ganz nach oben (eigene Animation, ca. 1,2 bis 3 Sekunden)
+      var running = false;
+      function cancelScroll() { running = false; }
+      ['wheel', 'touchstart', 'keydown'].forEach(function (ev) {
+        window.addEventListener(ev, cancelScroll, { passive: true });
+      });
+      btn.addEventListener('click', function () {
+        var start = window.pageYOffset;
+        if (!start) return;
+        var duration = Math.min(3000, 1200 + start * 0.3), t0 = null;
+        running = true;
+        function step(t) {
+          if (!running) return;
+          if (t0 === null) t0 = t;
+          var p = Math.min(1, (t - t0) / duration);
+          var ease = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+          window.scrollTo(0, Math.round(start * (1 - ease)));
+          if (p < 1) window.requestAnimationFrame(step); else running = false;
+        }
+        window.requestAnimationFrame(step);
       });
     })();
   </script>
